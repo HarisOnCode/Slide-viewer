@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roman Era - Visual Language</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            border-left: 3px solid #b91c1c;
+            /* Roman Red accent */
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #b91c1c;
+            /* Roman Red */
+        }
+
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #1a1a1a;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: #f9fafb;
+            padding: 1rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -5rem;
+            right: -5rem;
+            width: 15rem;
+            height: 15rem;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<!-- Using a representative image of Pompeii Fresco style -->
+<img alt="Roman Fresco from Pompeii" class="main-image" src="https://www.genspark.ai/image_placeholder.png" style="object-position: center top;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Villa of Mysteries Fresco</strong> (Pompeii)<br/>
+                    Examples of "Second Style" wall painting, utilizing <em>trompe-l'œil</em> to create depth and
+                    realistic architectural illusions.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<span class="era-tag">04. Roman Era Visuals</span>
+<h1 class="slide-title">Realism &amp;<br/>Engineering</h1>
+<div class="text-block">
+<h3 class="text-heading">Verism in Portraiture</h3>
+<p class="body-text">
+                    Unlike Greek idealism, Roman visual language embraced <strong>verism</strong>—a hyper-realistic
+                    style that celebrated age, experience, and authority. This is evident in the intricate mosaics and
+                    frescoes of Pompeii, which introduced sophisticated shading and perspective to capture the "truth"
+                    of the subject.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">The Language of Power: Arches &amp; Domes</h3>
+<p class="body-text">
+                    Roman visual dominance extended to the skyline through the invention of concrete. They engineered
+                    the <strong>arch</strong> and the <strong>dome</strong> (e.g., The Pantheon), moving away from
+                    post-and-lintel limits to create vast, unencumbered interior spaces that symbolized the empire's
+                    reach.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Roman design married the illusion of life in painting with the reality of eternal strength in
+                    architecture."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Roman Era / Visual Language</span>
+<span class="page-number">47</span>
+</div>
+</div>
+</div>
+</body>
+</html>

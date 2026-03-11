@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stone Age - Visual Communication</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Filter to give historical feel */
+            /* filter: sepia(0.1) contrast(1.05); */
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 3.5rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #d1d5db;
+        }
+
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: #d1d5db;
+            margin-right: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #1a1a1a;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f9fafb;
+            padding: 1rem 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .symbol-item {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6b7280;
+            padding: 5px;
+            border: 1px solid #e5e7eb;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -8rem;
+            right: -8rem;
+            width: 20rem;
+            height: 20rem;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Cave Art Symbols" class="main-image" src="https://page.gensparksite.com/slides_images/d162d9c780b013f44ca6d41696e9f740.webp"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Geometric Signs (c. 15,000 BCE)</strong><br/>
+                    Beyond animals, early humans developed a lexicon of 32 abstract signs found repeatedly across
+                    European cave sites, suggesting a shared system of graphic communication.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<span class="era-tag">01. Stone Age Design</span>
+<h1 class="slide-title">Visual<br/>Communication</h1>
+<div class="text-block">
+<h3 class="text-heading"><span class="icon-bullet"></span>Pictographs &amp; Proto-Writing</h3>
+<p class="body-text">
+                    Long before alphabets, graphic communication began with pictographs (literal representations) and
+                    ideographs (abstract concepts). These marks served not just as art, but as functional records of
+                    hunting grounds, lunar cycles, and tribal territory.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading"><span class="icon-bullet"></span>Narrative &amp; Teaching</h3>
+<p class="body-text">
+                    Cave panels were often arranged sequentially, functioning as early "storyboards" to teach hunting
+                    strategies or initiate youth into tribal lore. The rhythmic repetition of dots and lines suggests an
+                    early understanding of pattern as information.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "These recurring symbols represent the first step toward graphic design—standardizing visual
+                    language to transmit knowledge across time."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Stone Age / Communication</span>
+<span class="page-number">10</span>
+</div>
+</div>
+</div>
+</body>
+</html>

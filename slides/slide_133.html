@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comparison - Industrial Era vs Arts &amp; Crafts</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header-section {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #e5e5e5;
+            position: relative;
+            z-index: 10;
+            background-color: #ffffff;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        .vs-circle {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: #1a1a1a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            z-index: 20;
+            border: 4px solid #ffffff;
+        }
+
+        /* Split Content Area */
+        .split-content {
+            flex: 1;
+            display: flex;
+            position: relative;
+        }
+
+        /* Left Side - Industrial */
+        .left-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #e5e7eb;
+            /* Cool grey for industry */
+        }
+
+        /* Right Side - Arts & Crafts */
+        .right-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #f4f1ea;
+            /* Warm natural paper tone for craft */
+        }
+
+        /* Image Areas */
+        .image-area {
+            height: 55%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .panel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .panel-image:hover {
+            transform: scale(1.03);
+        }
+
+        .image-label {
+            position: absolute;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #1a1a1a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+
+        /* Text Content Areas */
+        .text-area {
+            flex: 1;
+            padding: 2.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .philosophy-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .key-concept {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 0.5rem;
+            width: 80px;
+        }
+
+        .comparison-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        .footer-info {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+            border-top: 1px solid #e5e5e5;
+            background-color: #ffffff;
+            z-index: 10;
+        }
+
+        .footer-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<span class="section-tag">Reaction &amp; Reform</span>
+<h1 class="slide-title">Machine vs. Hand</h1>
+<div class="vs-circle">vs</div>
+</div>
+<!-- Split Content -->
+<div class="split-content">
+<!-- Left Panel: Industrial Era -->
+<div class="left-panel">
+<div class="image-area">
+<img alt="Industrial Revolution Factory Scene" class="panel-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-label">Industrial Era</div>
+</div>
+<div class="text-area">
+<h2 class="philosophy-title">Mass &amp; Speed</h2>
+<div class="key-concept">Efficiency</div>
+<p class="comparison-text">
+                        Defined by mechanization, standardization, and speed. The focus shifted to mass production,
+                        lower costs, and accessibility, often sacrificing material integrity for novelty. Design became
+                        separated from making, prioritizing volume over individual craft.
+                    </p>
+</div>
+</div>
+<!-- Right Panel: Arts & Crafts -->
+<div class="right-panel">
+<div class="image-area">
+<img alt="William Morris Pattern Design" class="panel-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-label">Arts &amp; Crafts</div>
+</div>
+<div class="text-area">
+<h2 class="philosophy-title">Craft &amp; Honesty</h2>
+<div class="key-concept">Integrity</div>
+<p class="comparison-text">
+                        A moral reaction emphasizing truth to materials, the joy of labor, and nature-inspired forms.
+                        Morris championed ethical production where design and execution were unified. Value lay in the
+                        human touch, quality, and the spiritual connection to work.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="footer-text">History of Design / Comparative Analysis</span>
+<span class="footer-text">133</span>
+</div>
+</div>
+</body>
+</html>

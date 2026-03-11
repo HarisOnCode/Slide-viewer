@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section Opener - Rococo Era</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcefee;
+            /* Soft pastel pink background base for Rococo */
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Lighter filter for Rococo to keep the pastel/airy feel, less dark than other eras */
+            filter: brightness(0.85) contrast(1.05);
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 6rem;
+            /* Lighter overlay for Rococo aesthetics */
+            background-color: rgba(60, 40, 50, 0.3);
+        }
+
+        .era-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        .era-number::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #fff;
+            margin-right: 1.5rem;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            line-height: 0.9;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            font-style: italic;
+            /* Adding italic for Rococo elegance */
+        }
+
+        .description-box {
+            max-width: 600px;
+            border-left: 4px solid #f8cdda;
+            /* Pastel pink accent */
+            padding-left: 2rem;
+        }
+
+        .description-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-details {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.05em;
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 1rem 2rem;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+        }
+
+        .vertical-deco-text {
+            position: absolute;
+            right: 4rem;
+            bottom: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.8);
+            transform: rotate(-90deg);
+            transform-origin: bottom right;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .image-credit {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: sans-serif;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Hero Image: Rococo Portrait -->
+<img alt="Rococo Portrait" class="hero-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<!-- Content Overlay -->
+<div class="content-overlay">
+<div class="era-number">
+<p>Era 07</p>
+</div>
+<h1 class="main-title">
+<p>Rococo<br/>Era</p>
+</h1>
+<div class="description-box">
+<p class="description-text">Design as delicate luxury and intimacy. A playful rebellion of asymmetry,
+                    pastels, and soft lines.</p>
+<p class="sub-details">Key Themes: Intimacy, Asymmetry, Pastels, Nature</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="date-badge">
+<p>c. 1730 – 1770s</p>
+</div>
+<div class="vertical-deco-text">
+<p>The Age of Pleasure</p>
+</div>
+<div class="image-credit">
+<p>Image: Marie Antoinette Portrait | Source: PICRYL (Public Domain)</p>
+</div>
+</div>
+</body>
+</html>

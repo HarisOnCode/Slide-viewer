@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rococo - Men's Garments</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #f0e6e6;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Enhance pastel tones slightly */
+            filter: contrast(1.05) saturate(1.1);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(60, 40, 40, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+            border-left: 3px solid #e9d5d5;
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #bfaea8;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #4a3b3b;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #e6c8c8;
+        }
+
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #5d4a4a;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #6b5b5b;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #d4b8b8;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: rgba(249, 240, 240, 0.5);
+            padding: 1rem 1rem 1rem 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #5c4d4d;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -8rem;
+            right: -8rem;
+            width: 20rem;
+            height: 20rem;
+            border: 1px solid #f3e8e8;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .deco-circle-inner {
+            position: absolute;
+            top: -4rem;
+            right: -4rem;
+            width: 12rem;
+            height: 12rem;
+            border: 1px dashed #efe4e4;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Rococo Gentleman Portrait" class="main-image" src="https://page.gensparksite.com/slides_images/f62497ae2e430a9c2f3053537a1a5bda.jpg" style="object-position: center top;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Gentleman's Habit à la Française</strong> (c. 1760)<br/>
+                    Embroidered silk coat, waistcoat, and breeches reflecting the refined masculinity of the Rococo
+                    salon.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<div class="deco-circle-inner"></div>
+<span class="era-tag">07. Rococo Era</span>
+<h1 class="slide-title">Refined Masculinity:<br/>The Habit à la Française</h1>
+<div class="text-block">
+<h3 class="text-heading">The Three-Piece Suit Emerges</h3>
+<p class="body-text">
+                    The foundation of modern menswear solidified in the Rococo period with the <em>habit à la
+                        française</em>: a coat (justaucorps), waistcoat (gilet), and breeches (culottes). While slimmer
+                    than Baroque cuts, the emphasis remained on exquisite surface decoration.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Embroidery as Status</h3>
+<p class="body-text">
+                    Men were as decorative as women, wearing silks embroidered with floral motifs, metallic threads, and
+                    sequins. The waistcoat became the focal point of artistic expression, often contrasting boldly with
+                    the outer coat in color and texture.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Male elegance was defined by the quality of embroidery and the whiteness of linen stockings—a
+                    display of leisure and refinement."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Rococo / Men's Garments</span>
+<span class="page-number">90</span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roman Era - Women's Garments</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 3rem 4rem;
+        }
+
+        /* Header Styling */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1rem;
+        }
+
+        .title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* 2x2 Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            background-color: #f3f4f6;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-wrapper {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            /* Focused on portraits/statues */
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .item-caption {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .caption-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .item-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-top: 1px solid #f9fafb;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-group">
+<span class="era-tag">04. Roman Era</span>
+<h1 class="slide-title">Women's Garments</h1>
+<p class="slide-subtitle">Stola, Palla &amp; Imperial Elegance</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">50</p>
+</div>
+</div>
+<!-- 2x2 Gallery Grid -->
+<div class="gallery-grid">
+<!-- Item 1 -->
+<div class="gallery-item">
+<div class="item-number">01</div>
+<div class="image-wrapper">
+<img alt="Roman Matron in Stola" class="gallery-image" src="https://page.gensparksite.com/slides_images/a5f9b907391aa14d2b9fab8649f90b95.webp"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Stola</h3>
+<p class="caption-desc">The traditional garment of Roman matrons (married women), distinct from the
+                        Greek chiton. A long, sleeveless tunic suspended from straps, symbolizing modesty and status.
+                    </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="gallery-item">
+<div class="item-number">02</div>
+<div class="image-wrapper">
+<img alt="Roman Woman with Palla" class="gallery-image" src="https://page.gensparksite.com/slides_images/3e93b51a1ab05d59f9a2c93049c67ee6.webp"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Palla</h3>
+<p class="caption-desc">A large rectangular shawl draped over the stola. Worn outdoors as a veil or
+                        wrap, offering warmth and further signaling respectability and adherence to Roman social codes.
+                    </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="gallery-item">
+<div class="item-number">03</div>
+<div class="image-wrapper">
+<img alt="Elaborate Roman Hairstyle" class="gallery-image" src="https://page.gensparksite.com/slides_images/0aae4dfaa4207741ea9a23c07c2d6cc1.webp"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Coiffure &amp; Complexity</h3>
+<p class="caption-desc">Elaborate hairstyles (Flavian curls, braided buns) became key indicators of
+                        wealth, requiring enslaved hairdressers (ornatrices) and showcasing imperial trends.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="gallery-item">
+<div class="item-number">04</div>
+<div class="image-wrapper">
+<img alt="Roman Jewelry" class="gallery-image" src="https://page.gensparksite.com/slides_images/81c1b3d1b979ad4aea98c4f02ddea283.webp"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Adornment &amp; Jewelry</h3>
+<p class="caption-desc">Unlike men restricted to rings, women wore opulent necklaces, earrings, and
+                        bracelets of gold, pearls, and emeralds, displaying family wealth and cosmopolitan trade
+                        connections.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Roman Era / Garments</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

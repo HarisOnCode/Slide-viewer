@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Historical Background</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Slight contrast boost for Baroque drama */
+            filter: contrast(1.1);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+            border-left: 2px solid #fbbf24;
+            /* Gold accent for Baroque */
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #fbbf24;
+            /* Gold accent */
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #1a1a1a;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -8rem;
+            right: -8rem;
+            width: 20rem;
+            height: 20rem;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .deco-line {
+            position: absolute;
+            bottom: 6rem;
+            right: 0;
+            width: 150px;
+            height: 1px;
+            background-color: #fbbf24;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Baroque Architecture Detail" class="main-image" src="https://page.gensparksite.com/slides_images/7db0e974cd816e6a2c5c92f3939a4c3f.webp" style="object-position: center;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Ecstasy &amp; Architecture</strong> (c. 1650)<br/>
+                    The fluid, undulating curves of Borromini's architecture defied the static straight lines of the
+                    Renaissance, creating buildings that seemed to move.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<div class="deco-line"></div>
+<span class="era-tag">06. Baroque Era Context</span>
+<h1 class="slide-title">Theater of State<br/>&amp; Motion</h1>
+<div class="text-block">
+<h3 class="text-heading">The Age of Absolutism</h3>
+<p class="body-text">
+                    The Baroque era (c. 1600–1750) was the ultimate theater of state power. Monarchs like Louis XIV
+                    utilized design as a tool of political persuasion, transforming palaces into stages where every
+                    detail—from architecture to dress—performed authority.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Chiaroscuro &amp; Dynamism</h3>
+<p class="body-text">
+                    Static forms were abandoned for dynamic movement. Artists like Bernini froze moments of intense
+                    emotion in stone, while architecture embraced convex and concave curves, creating a visual language
+                    of high contrast (chiaroscuro) and drama.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Baroque is the art of the theatrum mundi—the world as a stage where light, shadow, and movement
+                    converge."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Baroque / Background</span>
+<span class="page-number">70</span>
+</div>
+</div>
+</div>
+</body>
+</html>

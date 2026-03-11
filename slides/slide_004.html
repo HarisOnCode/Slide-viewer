@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How to Read This Deck</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f9f8f4;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 3rem 4rem;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 1.5rem;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #6b7280;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .module-icon {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .module-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .number-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #d1d5db;
+        }
+
+        .accent-bar {
+            width: 40px;
+            height: 3px;
+            background-color: #1a1a1a;
+            margin-top: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Editorial Elements */
+        .editorial-line {
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #f3f4f6;
+            z-index: 0;
+        }
+
+        .editorial-bg-text {
+            position: absolute;
+            bottom: -2rem;
+            right: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(0, 0, 0, 0.02);
+            font-style: italic;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .fashion-quote {
+            grid-column: span 2;
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<div class="editorial-line"></div>
+<div class="editorial-bg-text">Guide</div>
+<!-- Header -->
+<div class="header-section relative z-10">
+<div>
+<h1 class="title">How to Read This Deck</h1>
+<p class="subtitle" style="margin-top: 0.5rem;">Navigating 10 Eras of Design History</p>
+</div>
+<div class="text-right">
+<p class="subtitle">Structure per Era</p>
+</div>
+</div>
+<!-- Grid Content -->
+<div class="content-grid relative z-10">
+<!-- Context Modules -->
+<div class="module-card">
+<span class="number-tag">01</span>
+<i class="fas fa-landmark module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">Context</h3>
+<p class="module-desc">Timeline, historical background, religion, and beliefs that shaped the aesthetic.
+                </p>
+</div>
+<div class="module-card">
+<span class="number-tag">02</span>
+<i class="fas fa-palette module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">Visual Language</h3>
+<p class="module-desc">Color symbolism, graphic communication, art forms, and key artistic figures.</p>
+</div>
+<div class="module-card">
+<span class="number-tag">03</span>
+<i class="fas fa-tshirt module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">The Look</h3>
+<p class="module-desc">Garment origins, silhouettes, men's &amp; women's fashion details, jewelry.</p>
+</div>
+<div class="module-card">
+<span class="number-tag">04</span>
+<i class="fas fa-gem module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">Adornment</h3>
+<p class="module-desc">Makeup, tattoos, grooming standards, and body aesthetics of the time.</p>
+</div>
+<!-- Analysis Modules -->
+<div class="fashion-quote">
+<p class="quote-text">"Design is the silent ambassador of your brand."</p>
+<p class="font-sans text-xs tracking-widest uppercase opacity-70">Paul Rand</p>
+</div>
+<div class="module-card">
+<span class="number-tag">05</span>
+<i class="fas fa-bolt module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">Analysis</h3>
+<p class="module-desc">Shocking facts, why this era matters today, and personal POV on design theory.
+                </p>
+</div>
+<div class="module-card">
+<span class="number-tag">06</span>
+<i class="fas fa-code-branch module-icon"></i>
+<div class="accent-bar"></div>
+<h3 class="module-title">Comparisons</h3>
+<p class="module-desc">Direct contrasts between major movements (e.g., Greek vs Roman, Baroque vs
+                    Rococo).</p>
+</div>
+</div>
+<div class="absolute bottom-4 left-16 text-xs text-gray-400 font-sans tracking-widest">
+            SIMAL KHAN FT49 | HISTORY OF DESIGN
+        </div>
+</div>
+</body>
+</html>

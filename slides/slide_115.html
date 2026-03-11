@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Art Nouveau - Art Forms &amp; Interiors</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.1) contrast(1.05);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4a373;
+            /* Art Nouveau Gold/Earth tone */
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #d4a373;
+            /* Matching accent color */
+            border-radius: 2px;
+        }
+
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #d4a373;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -6rem;
+            right: -6rem;
+            width: 18rem;
+            height: 18rem;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .deco-line {
+            position: absolute;
+            bottom: 15%;
+            right: 0;
+            width: 20%;
+            height: 1px;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Hector Guimard Paris Metro Entrance" class="main-image" src="https://www.genspark.ai/image_placeholder.png" style="object-position: center bottom;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Paris Métro Entrance</strong> (c. 1900)<br/>
+                    Hector Guimard's iconic cast-iron structures transformed public infrastructure into organic
+                    sculpture, bringing the avant-garde to the street.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<div class="deco-line"></div>
+<span class="era-tag">12. Art Nouveau Context</span>
+<h1 class="slide-title">Architecture as<br/>Living Organism</h1>
+<div class="text-block">
+<h3 class="text-heading">The Total Work of Art</h3>
+<p class="body-text">
+                    Victor Horta and Hector Guimard redefined space through the <em>Gesamtkunstwerk</em> concept.
+                    Structure was not hidden but celebrated; iron columns bloomed into "whiplash" curves, and stained
+                    glass bathed interiors in botanical light, seamlessly merging function with ornament.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Metropolitan Identity</h3>
+<p class="body-text">
+                    Guimard's Paris Métro entrances utilized industrial materials—modular cast iron and glass—to create
+                    fluid, vegetal forms. This marked a radical shift where modern industrial methods were used to
+                    create uniquely organic, non-historical urban landmarks.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "I want to make the structure sing. Iron, glass, and stone must flow together like the stems of a
+                    vine."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Art Nouveau / Interiors</span>
+<span class="page-number">115</span>
+</div>
+</div>
+</div>
+</body>
+</html>

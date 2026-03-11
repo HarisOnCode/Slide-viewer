@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Key Takeaways - Design DNA Across Eras</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 3rem 4rem 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        .slide-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: #f3f4f6;
+            line-height: 0.8;
+        }
+
+        /* Main Content Area */
+        .content-area {
+            flex: 1;
+            display: flex;
+            padding: 3rem 4rem;
+            gap: 3rem;
+        }
+
+        /* Left Side: Key Points List */
+        .takeaways-list {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .takeaway-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .point-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #d1d5db;
+            line-height: 1;
+            font-style: italic;
+            min-width: 40px;
+        }
+
+        .point-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .point-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .point-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        /* Right Side: Visual Montage */
+        .visual-montage {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+
+        .montage-strip {
+            flex: 1;
+            display: flex;
+            gap: 1rem;
+            height: 100%;
+        }
+
+        .montage-image-wrapper {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            background-color: #f3f4f6;
+        }
+
+        .montage-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .montage-image-wrapper:hover .montage-image {
+            transform: scale(1.05);
+        }
+
+        .caption-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #1a1a1a;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .montage-image-wrapper:hover .caption-overlay {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        .footer-info {
+            padding: 1.5rem 4rem;
+            border-top: 1px solid #f9fafb;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Decorative Elements */
+        .deco-line {
+            width: 60px;
+            height: 2px;
+            background-color: #1a1a1a;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="header-content">
+<span class="section-tag">Summary &amp; Conclusions</span>
+<h1 class="slide-title">Design DNA Across Eras</h1>
+</div>
+<div class="slide-number">135</div>
+</div>
+<!-- Main Content -->
+<div class="content-area">
+<!-- Left Column: Key Takeaways -->
+<div class="takeaways-list">
+<div class="deco-line"></div>
+<!-- Point 1 -->
+<div class="takeaway-item">
+<span class="point-number">01</span>
+<div class="point-content">
+<h3 class="point-title">Evolution of Symbols</h3>
+<p class="point-desc">
+                            From Paleolithic hand stencils to Art Deco chevrons, visual motifs have always served as
+                            cultural shorthand—communicating status, belief, and identity before a word is spoken.
+                        </p>
+</div>
+</div>
+<!-- Point 2 -->
+<div class="takeaway-item">
+<span class="point-number">02</span>
+<div class="point-content">
+<h3 class="point-title">Silhouette &amp; Society</h3>
+<p class="point-desc">
+                            Garment shapes mirror social structures: the draped democracy of the Greek chiton, the rigid
+                            hierarchy of the Baroque corset, and the liberated motion of the flapper dress all reflect
+                            their era's values.
+                        </p>
+</div>
+</div>
+<!-- Point 3 -->
+<div class="takeaway-item">
+<span class="point-number">03</span>
+<div class="point-content">
+<h3 class="point-title">Surface &amp; Technology</h3>
+<p class="point-desc">
+                            Textile innovation drives aesthetic shifts. Egyptian linen mastery, Medieval tapestry
+                            weaving, and Industrial Age machine prints each unlocked new possibilities for surface
+                            design and mass communication.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Montage -->
+<div class="visual-montage">
+<!-- Top Row Images -->
+<div class="montage-strip" style="height: 60%;">
+<div class="montage-image-wrapper">
+<img alt="Ancient Textures" class="montage-image" src="https://page.gensparksite.com/slides_images/362828d3a029283bcd0ecb024a79cfc8.webp"/>
+<div class="caption-overlay">Tactile Origins</div>
+</div>
+<div class="montage-image-wrapper">
+<img alt="Classical Forms" class="montage-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="caption-overlay">Classical Form</div>
+</div>
+</div>
+<!-- Bottom Row Images -->
+<div class="montage-strip" style="height: 40%;">
+<div class="montage-image-wrapper">
+<img alt="Modern Geometry" class="montage-image" src="https://page.gensparksite.com/slides_images/ef62d58efe59405c48e388edba29e550.webp" style="object-position: bottom;"/>
+<div class="caption-overlay">Modern Geometry</div>
+</div>
+<div class="montage-image-wrapper">
+<img alt="Future Craft" class="montage-image" src="https://page.gensparksite.com/slides_images/d162d9c780b013f44ca6d41696e9f740.webp"/>
+<div class="caption-overlay">Future Craft</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Key Takeaways</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

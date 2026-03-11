@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rococo Era - Women's Garments</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 3rem 4rem;
+        }
+
+        /* Header Styling */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #fce7f3;
+            padding-bottom: 1rem;
+        }
+
+        .title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #db2777;
+            /* Pinkish tone for Rococo */
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* 2x2 Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            background-color: #fdf2f8;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #fce7f3;
+        }
+
+        .image-wrapper {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .item-caption {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-top: 1px solid #fce7f3;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #be185d;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .caption-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .item-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #be185d;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-group">
+<span class="era-tag">07. Rococo Era</span>
+<h1 class="slide-title">Rococo Silhouette</h1>
+<p class="slide-subtitle">Pastels, Paniers &amp; The Art of Artificiality</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #fce7f3;">89</p>
+</div>
+</div>
+<!-- 2x2 Gallery Grid -->
+<div class="gallery-grid">
+<!-- Item 1 -->
+<div class="gallery-item">
+<div class="item-number">01</div>
+<div class="image-wrapper">
+<img alt="Marie Antoinette Portrait" class="gallery-image" src="https://page.gensparksite.com/slides_images/ce6a14b56efb5a745dc98178c6ff9ff2.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Robe à la Française</h3>
+<p class="caption-desc">Characterized by wide paniers and Watteau pleats at the back. Pastel silks
+                        in rose, mint, and sky blue dominated court fashion.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="gallery-item">
+<div class="item-number">02</div>
+<div class="image-wrapper">
+<img alt="Rococo Lady Portrait" class="gallery-image" src="https://page.gensparksite.com/slides_images/6f5370cc0eb1f79f13a571658736fcd7.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Delicate Textiles</h3>
+<p class="caption-desc">Lightweight silks replaced heavy baroque velvets. Floral motifs, ribbons,
+                        and lace trimmings created an air of ethereal lightness.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="gallery-item">
+<div class="item-number">03</div>
+<div class="image-wrapper">
+<img alt="Fichu and Bodice Detail" class="gallery-image" src="https://page.gensparksite.com/slides_images/be2e7941151a53cb3d09e1afcb578d5c.webp"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Modesty &amp; Allure</h3>
+<p class="caption-desc">The fichu (neckerchief) filled low necklines while corsetry enforced a
+                        conical torso shape, emphasizing a narrow waist and exposed décolletage.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="gallery-item">
+<div class="item-number">04</div>
+<div class="image-wrapper">
+<img alt="Marie Antoinette Engraving" class="gallery-image" src="https://page.gensparksite.com/slides_images/4bdca13c1912d714920500a6977b87ed.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Pouf &amp; Headwear</h3>
+<p class="caption-desc">Hairstyles grew vertically, adorned with feathers, pearls, and even model
+                        ships. Millinery became a central expressive element of the ensemble.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Rococo Era / Women's Garments</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

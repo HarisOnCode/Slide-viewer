@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table of Contents</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f9f8f4;
+            /* Off-white editorial paper */
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            width: 35%;
+            height: 100%;
+            background-color: #1a1a1a;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .sidebar-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .main-content {
+            width: 65%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .toc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .toc-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 5rem;
+            row-gap: 1.8rem;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .item-number {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #9CA3AF;
+            /* gray-400 */
+            margin-right: 1rem;
+            width: 2.5rem;
+        }
+
+        .item-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1F2937;
+            /* gray-800 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Decorative line */
+        .deco-line {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dark Sidebar -->
+<div class="sidebar">
+<!-- Using a textured/abstract image for depth -->
+<img alt="Abstract Texture" class="sidebar-bg" src="https://page.gensparksite.com/slides_images/ef62d58efe59405c48e388edba29e550.webp"/>
+<h1 class="toc-title">Table<br/>of<br/>Contents</h1>
+<p class="toc-subtitle">History of Design Course</p>
+<div class="mt-auto relative z-10">
+<p class="font-serif italic text-gray-400 text-lg">"Design is intelligence made visible."</p>
+</div>
+</div>
+<!-- Main Content List -->
+<div class="main-content relative">
+<div class="list-grid">
+<!-- Column 1 -->
+<div class="list-item">
+<span class="item-number">01</span>
+<span class="item-text">Stone Age</span>
+</div>
+<div class="list-item">
+<span class="item-number">02</span>
+<span class="item-text">Egyptian Era</span>
+</div>
+<div class="list-item">
+<span class="item-number">03</span>
+<span class="item-text">Greek Era</span>
+</div>
+<div class="list-item">
+<span class="item-number">04</span>
+<span class="item-text">Roman Era</span>
+</div>
+<div class="list-item">
+<span class="item-number">05</span>
+<span class="item-text">Medieval Era</span>
+</div>
+<div class="list-item">
+<span class="item-number">06</span>
+<span class="item-text">Baroque Era</span>
+</div>
+<!-- Column 2 -->
+<div class="list-item">
+<span class="item-number">07</span>
+<span class="item-text">Rococo Era</span>
+</div>
+<div class="list-item">
+<span class="item-number">08</span>
+<span class="item-text">Arts &amp; Crafts</span>
+</div>
+<div class="list-item">
+<span class="item-number">09</span>
+<span class="item-text">Art Nouveau</span>
+</div>
+<div class="list-item">
+<span class="item-number">10</span>
+<span class="item-text">Art Deco</span>
+</div>
+<div class="list-item">
+<span class="item-number">11</span>
+<span class="item-text">Comparisons</span>
+</div>
+<div class="list-item">
+<span class="item-number">12</span>
+<span class="item-text">Conclusion</span>
+</div>
+</div>
+<!-- Page Number / Decor -->
+<div class="absolute bottom-8 right-8 text-gray-400 font-sans text-xs tracking-widest">
+                PG. 02
+            </div>
+</div>
+</div>
+</body>
+</html>

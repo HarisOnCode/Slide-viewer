@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rococo Visual Language</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf6f7;
+            /* Very subtle pink tint for Rococo feel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(69, 39, 44, 0.7);
+            /* Darker pink/brown tint */
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4a5a5;
+            /* Muted rose color */
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #f3d1d1;
+            /* Pastel pink accent */
+        }
+
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #5d4037;
+            /* Warm brown */
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #d4a5a5;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: rgba(253, 246, 247, 0.5);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #5d4037;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-scroll {
+            position: absolute;
+            top: -3rem;
+            right: -3rem;
+            font-size: 15rem;
+            color: #fdf2f2;
+            font-family: 'Playfair Display', serif;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.5;
+            transform: rotate(-10deg);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Rococo Interior Boiserie and Lace Details" class="main-image" src="https://www.genspark.ai/image_placeholder.png" style="object-position: center;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Hôtel de Soubise, Salon de la Princesse</strong> (c. 1735)<br/>
+                    Example of Boffrand's masterpiece showing gilded boiserie, asymmetrical curves, and the seamless
+                    integration of painting and architecture.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-scroll">S</div>
+<span class="era-tag">07. Rococo Era</span>
+<h1 class="slide-title">Asymmetry &amp;<br/>Playful Ornament</h1>
+<div class="text-block">
+<h3 class="text-heading">Rocailles &amp; S-Curves</h3>
+<p class="body-text">
+                    The visual language shifted from Baroque grandeur to intimate caprice. The signature
+                    <em>rocaille</em> (shell-work) motif introduced fluid, asymmetrical forms resembling rocks, shells,
+                    and C-scrolls that defied classical orders.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Textile Lightness</h3>
+<p class="body-text">
+                    Heavy velvets were replaced by airy silks, taffetas, and intricate lace. Floral patterns became
+                    smaller and more naturalistic, often meandering in serpentine lines that echoed the era's furniture
+                    legs and panel moldings.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Rococo design rejected straight lines for the curve, favoring lightness, asymmetry, and a playful
+                    sense of movement over rigid symmetry."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Rococo / Visual Language</span>
+<span class="page-number">86</span>
+</div>
+</div>
+</div>
+</body>
+</html>

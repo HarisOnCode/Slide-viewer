@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bibliography / Image Credits</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: relative;
+            background-image: url('https://page.gensparksite.com/slides_images/362828d3a029283bcd0ecb024a79cfc8.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.96);
+            z-index: 1;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 3rem 4rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            z-index: 10;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        .slide-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #f3f4f6;
+            line-height: 1;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            padding: 3rem 4rem;
+            gap: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .source-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .column-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-icon {
+            font-size: 1.2rem;
+            color: #9ca3af;
+        }
+
+        .source-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .source-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .source-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .source-detail {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .source-link {
+            color: #9ca3af;
+            font-size: 0.75rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            margin-top: 0.25rem;
+            display: inline-block;
+        }
+
+        .source-link:hover {
+            color: #1a1a1a;
+        }
+
+        /* Visual Element */
+        .decorative-stamp {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            width: 120px;
+            height: 120px;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transform: rotate(-15deg);
+            opacity: 0.5;
+        }
+
+        .stamp-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-align: center;
+            color: #d1d5db;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            z-index: 10;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Overlay -->
+<div class="overlay"></div>
+<!-- Header -->
+<div class="header-section">
+<div class="header-content">
+<span class="section-tag">Resources &amp; References</span>
+<h1 class="slide-title">Bibliography</h1>
+</div>
+<div class="slide-number">139</div>
+</div>
+<!-- Main Content -->
+<div class="content-wrapper">
+<!-- Left Column: Primary Sources -->
+<div class="source-column">
+<div class="column-header">
+<i class="fas fa-book header-icon"></i>
+<h2>Primary Institutions</h2>
+</div>
+<ul class="source-list">
+<li class="source-item">
+<span class="source-title">The Metropolitan Museum of Art</span>
+<p class="source-detail">Heilbrunn Timeline of Art History. Extensive collection records on
+                            Egyptian broad collars, Greek statuary, and Art Deco decorative arts.</p>
+<a class="source-link" href="#">www.metmuseum.org</a>
+</li>
+<li class="source-item">
+<span class="source-title">Victoria and Albert Museum (V&amp;A)</span>
+<p class="source-detail">Collections: Fashion, Jewellery &amp; Accessories. Key references for
+                            Rococo textiles, Arts &amp; Crafts movement details, and Art Nouveau jewelry.</p>
+<a class="source-link" href="#">www.vam.ac.uk</a>
+</li>
+<li class="source-item">
+<span class="source-title">British Museum</span>
+<p class="source-detail">Department of Ancient Egypt and Sudan; Department of Greece and Rome.
+                            Source material for Rosetta Stone context and Parthenon sculptures.</p>
+<a class="source-link" href="#">www.britishmuseum.org</a>
+</li>
+</ul>
+</div>
+<!-- Right Column: Scholarly Texts -->
+<div class="source-column">
+<div class="column-header">
+<i class="fas fa-graduation-cap header-icon"></i>
+<h2>Scholarly References</h2>
+</div>
+<ul class="source-list">
+<li class="source-item">
+<span class="source-title">World History Encyclopedia</span>
+<p class="source-detail">Comprehensive timelines and cultural context articles for Stone Age
+                            ritual practices, Roman engineering, and Medieval guild systems.</p>
+<a class="source-link" href="#">www.worldhistory.org</a>
+</li>
+<li class="source-item">
+<span class="source-title">Fashion History Timeline</span>
+<p class="source-detail">Fashion Institute of Technology (FIT). In-depth analysis of silhouette
+                            evolution from the 18th century (Rococo) through the 1920s (Art Deco).</p>
+<a class="source-link" href="#">fashionhistory.fitnyc.edu</a>
+</li>
+<li class="source-item">
+<span class="source-title">Design History Society</span>
+<p class="source-detail">Journal of Design History. Academic articles exploring the
+                            socio-economic impacts of the Industrial Revolution vs. Arts &amp; Crafts philosophy.</p>
+<a class="source-link" href="#">www.designhistorysociety.org</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="decorative-stamp">
+<span class="stamp-text">Veritas<br/>Et<br/>Ars</span>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Bibliography</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

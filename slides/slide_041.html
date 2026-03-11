@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Greek - Why It Matters + POV</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+        }
+
+        /* Atmospheric Background */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            filter: contrast(1.2) brightness(0.8) grayscale(0.2);
+            z-index: 1;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8rem;
+        }
+
+        /* Quote Section */
+        .quote-container {
+            position: relative;
+            margin-bottom: 3rem;
+            max-width: 900px;
+        }
+
+        .quote-mark {
+            position: absolute;
+            top: -5rem;
+            left: -4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(255, 255, 255, 0.15);
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: #ffffff;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        .quote-text em {
+            font-style: italic;
+            color: #d1d5db;
+            font-weight: 500;
+        }
+
+        /* POV Details */
+        .pov-block {
+            border-left: 2px solid #ffffff;
+            padding-left: 2rem;
+            margin-top: 2rem;
+            max-width: 750px;
+        }
+
+        .pov-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .pov-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Footer Elements */
+        .era-badge {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1.5rem;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+
+        .student-info {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Image -->
+<img alt="Parthenon Frieze" class="background-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<!-- Dark Overlay -->
+<div class="overlay"></div>
+<!-- Era Badge -->
+<div class="era-badge">
+<p>03. Greek Era</p>
+</div>
+<!-- Content -->
+<div class="content-wrapper">
+<div class="quote-container">
+<span class="quote-mark">“</span>
+<p class="quote-text">
+                    Timeless <em>proportion</em> and <em>drape</em> inform the very DNA of modern tailoring.
+                </p>
+</div>
+<div class="pov-block">
+<span class="pov-label">Why It Matters Today (POV)</span>
+<p class="pov-description">
+                    Greek aesthetics remind us that restraint creates longevity. In a world of fast fashion, the concept
+                    of modularity—seen in the chiton and peplos—offers a sustainable blueprint where simplicity and
+                    adaptability define true luxury.
+                </p>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="student-info">
+<p>Simal Khan FT49 | History of Design</p>
+</div>
+<div class="page-number">
+<p>41</p>
+</div>
+</div>
+</body>
+</html>

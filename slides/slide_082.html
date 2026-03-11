@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rococo Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #fcfbf9;
+            /* Slightly warmer off-white for Rococo */
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .left-panel {
+            width: 35%;
+            height: 100%;
+            background-color: #2c2420;
+            /* Dark warm brown/charcoal */
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .right-panel {
+            width: 65%;
+            height: 100%;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 1rem;
+            bottom: 1rem;
+            width: 2px;
+            background-color: #dcbfa5;
+            /* Pastel gold tone */
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #c5a083;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #c5a083;
+            margin-top: 5px;
+            margin-left: 1.6rem;
+            margin-right: 2rem;
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .era-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #8d7b6f;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+
+        .era-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2c2420;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            font-style: italic;
+        }
+
+        .era-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #5d5550;
+            line-height: 1.5;
+        }
+
+        .deco-number {
+            position: absolute;
+            bottom: -2rem;
+            right: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(197, 160, 131, 0.1);
+            font-style: italic;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decorative-graphic {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background-image: url("https://page.gensparksite.com/slides_images/a354a6083b1bbd50e9b7541add3f4ea7.webp");
+            background-size: cover;
+            opacity: 0.15;
+            mix-blend-mode: multiply;
+            mask-image: linear-gradient(to left, black, transparent);
+            -webkit-mask-image: linear-gradient(to left, black, transparent);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Rococo Fabric Texture" class="panel-bg" src="https://www.genspark.ai/image_placeholder.png"/>
+<h1 class="section-title">Rococo<br/>Timeline</h1>
+<p class="section-subtitle">1715 – 1780 CE</p>
+<div style="margin-top: auto; position: relative; z-index: 20;">
+<p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; opacity: 0.9; line-height: 1.4;">
+                    "With the Rococo, the terrible grandeur of Versailles was replaced by the intimate charm of the
+                    salon."
+                </p>
+<p style="margin-top: 1rem; font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.8;">- DESIGN HISTORY
+                    CONTEXT</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="decorative-graphic"></div>
+<div class="deco-number">Rococo</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Phase 1 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1715 – 1730</p>
+<h2 class="era-name">The Régence Transition</h2>
+<p class="era-desc">Aristocracy leaves Versailles for Paris. Rise of the <em>hôtel
+                                particulier</em> (townhouse) and intimate salon gatherings.</p>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1730 – 1750</p>
+<h2 class="era-name">High Rococo &amp; Asymmetry</h2>
+<p class="era-desc">The peak of <em>rocaille</em> (shell) ornamentation. Meissonnier defines the
+                            style with S-curves and elaborate whimsy.</p>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1750 – 1764</p>
+<h2 class="era-name">The Pompadour Era</h2>
+<p class="era-desc">Madame de Pompadour patronizes the arts. Soft pastels, Sèvres porcelain, and
+                            intellectual salon culture flourish.</p>
+</div>
+</div>
+<!-- Phase 4 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1770 – 1780</p>
+<h2 class="era-name">Pastoral Fantasy &amp; Decline</h2>
+<p class="era-desc">Marie Antoinette's Petit Trianon aesthetic. A shift toward "rustic"
+                            simplicity before Neoclassicism takes over.</p>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 2rem; right: 2rem; font-size: 0.7rem; color: #8d7b6f; letter-spacing: 0.1em;">
+                HISTORY OF DESIGN: ROCOCO
+            </div>
+</div>
+</div>
+</body>
+</html>

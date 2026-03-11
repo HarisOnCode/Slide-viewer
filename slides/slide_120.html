@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Art Deco - Background &amp; Core</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            display: inline-block;
+            border-left: 2px solid #d4af37;
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background-color: #121212;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #d4af37;
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e5e5e5;
+            font-weight: 300;
+        }
+
+        .highlight-box {
+            border: 1px solid #333;
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #d4af37;
+        }
+
+        .highlight-text {
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #d1d5db;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-lines {
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            width: 100px;
+            height: 100px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .line {
+            height: 2px;
+            background-color: #d4af37;
+            margin-bottom: 6px;
+            width: 100%;
+        }
+
+        .line:nth-child(2) {
+            width: 80%;
+            margin-left: auto;
+        }
+
+        .line:nth-child(3) {
+            width: 60%;
+            margin-left: auto;
+        }
+
+        .line:nth-child(4) {
+            width: 40%;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Chrysler Building Art Deco Architecture" class="main-image" src="https://page.gensparksite.com/slides_images/a7b7f15591886650cab95f253b4a8ce6.webp"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>The Machine Age</strong> (c. 1920s-30s)<br/>
+                    The Chrysler Building exemplifies Art Deco's fusion of verticality, industrial materials, and
+                    geometric ornamentation.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-lines">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+<span class="era-tag">10. Art Deco Context</span>
+<h1 class="slide-title">Modernity,<br/>Speed &amp; Luxury</h1>
+<div class="text-block">
+<h3 class="text-heading">Machine Aesthetic</h3>
+<p class="body-text">
+                    Art Deco embraced the machine age, celebrating technology through streamlined forms, geometric
+                    repetition, and sleek surfaces. It rejected historical revivalism in favor of a bold,
+                    forward-looking visual language symbolizing progress.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Material Opulence</h3>
+<p class="body-text">
+                    Designers combined industrial materials like chrome, glass, and plastic with traditional luxury
+                    elements—ivory, jade, and exotic woods. This synthesis created objects that felt both
+                    mass-producable and exceptionally exclusive.
+                </p>
+</div>
+<div class="highlight-box">
+<p class="highlight-text">
+                    "Streamlining extended beyond vehicles to everyday objects, turning toasters and radios into icons
+                    of velocity and efficiency."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Art Deco / Background &amp; Core</span>
+<span class="page-number">120</span>
+</div>
+</div>
+</div>
+</body>
+</html>

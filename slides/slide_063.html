@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medieval Era - Women's Garments</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 3rem 4rem;
+        }
+
+        /* Header Styling */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1rem;
+        }
+
+        .title-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* 2x2 Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            background-color: #f3f4f6;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-wrapper {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            /* Focused on garments/faces */
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+
+        .item-caption {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .caption-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .item-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-top: 1px solid #f9fafb;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-group">
+<span class="era-tag">05. Medieval Era</span>
+<h1 class="slide-title">Women's Silhouette</h1>
+<p class="slide-subtitle">Elongated Lines &amp; Courtly Elegance</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">63</p>
+</div>
+</div>
+<!-- 2x2 Gallery Grid -->
+<div class="gallery-grid">
+<!-- Item 1 -->
+<div class="gallery-item">
+<div class="item-number">01</div>
+<div class="image-wrapper">
+<img alt="The Houppelande" class="gallery-image" src="https://page.gensparksite.com/slides_images/35bc757d02544820f38b04072e0341ca.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Houppelande</h3>
+<p class="caption-desc">Voluminous outer garment with wide funnel sleeves and high collar, often
+                        lined with fur. Belted high under the bust to create a long, sweeping silhouette.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="gallery-item">
+<div class="item-number">02</div>
+<div class="image-wrapper">
+<img alt="Sideless Surcoat" class="gallery-image" src="https://page.gensparksite.com/slides_images/08e55310b9bd3aa58e78a0ce118482d7.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Sideless Surcoat</h3>
+<p class="caption-desc">Distinctive overgown with deep armholes cut down to the hips (the "gates of
+                        hell"), revealing the fitted kirtle beneath. A mark of royal and noble status.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="gallery-item">
+<div class="item-number">03</div>
+<div class="image-wrapper">
+<img alt="Hennin Headdress" class="gallery-image" src="https://page.gensparksite.com/slides_images/34b5d58a9e586b2e5f587ea4e37490f2.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">The Hennin</h3>
+<p class="caption-desc">Iconic cone-shaped headdress worn with a veil (wimple). Elongated the
+                        profile to match Gothic arches, often requiring plucked hairlines for a high forehead.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="gallery-item">
+<div class="item-number">04</div>
+<div class="image-wrapper">
+<img alt="Medieval Court Dress" class="gallery-image" src="https://page.gensparksite.com/slides_images/aca9032636604cc7441b1d87be940f39.jpg"/>
+</div>
+<div class="item-caption">
+<h3 class="caption-title">Courtly Layers</h3>
+<p class="caption-desc">Ensemble showing the layering of chemise, kirtle, and gown. Rich textiles
+                        like velvet and brocade signaled wealth, while heraldic colors displayed lineage.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Medieval Era / Fashion</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

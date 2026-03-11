@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Greek Era - Jewelry &amp; Accessories</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            background-color: #ffffff;
+            padding: 4rem 5rem;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1.5rem;
+        }
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* Grid Layout */
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr auto;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .grid-item {
+            position: relative;
+            background-color: #f3f4f6;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .swatch-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+
+        .swatch-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #e5e5e5;
+        }
+
+        /* Custom image styling for jewelry */
+        .color-circle.gold-texture {
+            background-color: #D4AF37;
+            background-image: url("https://www.genspark.ai/image_placeholder.png");
+            background-size: cover;
+        }
+
+        .swatch-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .item-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        /* Image Credits */
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            color: #4b5563;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .grid-item:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-block">
+<span class="era-tag">03. Greek Era</span>
+<h1 class="slide-title">Ornament &amp; Function</h1>
+<p class="slide-subtitle">Filigree Gold, Wreaths &amp; Fibulae</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">39</p>
+</div>
+</div>
+<!-- Moodboard Grid -->
+<div class="moodboard-grid">
+<!-- Large Feature Image -->
+<div class="grid-item">
+<img alt="Greek Gold Wreath" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p>Gold olive wreath, symbol of victory and status</p>
+</div>
+</div>
+<!-- Detail Image 1 -->
+<div class="grid-item">
+<img alt="Gold Necklace" class="grid-image" src="https://www.genspark.ai/image_placeholder.png" style="object-fit: cover; object-position: center;"/>
+<div class="image-caption">
+<p>Intricate filigree necklace work</p>
+</div>
+</div>
+<!-- Detail Image 2 -->
+<div class="grid-item">
+<img alt="Fibula Fastener" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p>Functional fibula used to pin garments</p>
+</div>
+</div>
+<!-- Item Details Row 1 -->
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle gold-texture"></div>
+<div class="swatch-info">
+<span class="item-name">The Gold Wreath</span>
+<p class="item-desc">Mimicking nature (oak, olive, laurel) in fragile gold sheet, worn for
+                            ceremonies and burials rather than daily life.</p>
+</div>
+</div>
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #B8860B;"></div>
+<div class="swatch-info">
+<span class="item-name">Filigree Technique</span>
+<p class="item-desc">Fine wire work soldered in delicate patterns, creating lightness and detail
+                            without heavy metal weight.</p>
+</div>
+</div>
+</div>
+<!-- Item Details Row 2 -->
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #CD7F32;"></div>
+<div class="swatch-info">
+<span class="item-name">Fibula (The Pin)</span>
+<p class="item-desc">Essential functional jewelry for securing the chiton and peplos at the
+                            shoulders, evolving into decorative brooches.</p>
+</div>
+</div>
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #A0522D;"></div>
+<div class="swatch-info">
+<span class="item-name">Signet Rings</span>
+<p class="item-desc">Carved gemstones or metal intaglios used for sealing documents and marking
+                            identity in civic life.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Greek Era / Jewelry</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

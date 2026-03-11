@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Egyptian - Historical Background</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            border-left: 3px solid #d4af37;
+            /* Gold accent for Egypt */
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+            /* Gold accent */
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #1a1a1a;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -5rem;
+            right: -5rem;
+            width: 15rem;
+            height: 15rem;
+            border: 1px solid #f3f4f6;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hieroglyph-bg {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0.05;
+            width: 200px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Egyptian Temple Columns and Reliefs" class="main-image" src="https://page.gensparksite.com/slides_images/828a2dfa6f87c4a734af6cb1c324ad17.webp"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Temple Architecture &amp; Frescoes</strong> (New Kingdom)<br/>
+                    Monumental structures displaying the synthesis of centralized power, agricultural wealth, and
+                    religious devotion through scale and imagery.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<!-- Subtle hieroglyph pattern suggestive background -->
+<svg class="hieroglyph-bg" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="#000" stroke-width="1"></path>
+<path d="M30,30 C50,10 50,50 70,30" fill="none" stroke="#000" stroke-width="1"></path>
+</svg>
+<span class="era-tag">02. Egyptian Era Context</span>
+<h1 class="slide-title">Power, Scale &amp;<br/>Permanence</h1>
+<div class="text-block">
+<h3 class="text-heading">The Gift of the Nile</h3>
+<p class="body-text">
+                    Egyptian civilization flourished through centralized agriculture along the Nile. Predictable
+                    flooding allowed for surplus grain, funding a complex bureaucracy and massive state projects that
+                    defined their visual culture.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Monumental Design</h3>
+<p class="body-text">
+                    Pharaohs projected absolute authority through colossal architecture—pyramids and temples. Design
+                    became a tool for immortality, prioritizing durability (stone) and rigid canons of proportion over
+                    naturalism.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "To speak the name of the dead is to make them live again—design was the vessel for eternal life."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Egyptian / Historical Background</span>
+<span class="page-number">18</span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Art Nouveau Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f9f8f4;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .left-panel {
+            width: 35%;
+            height: 100%;
+            background-color: #3f3844;
+            /* Dark purple/charcoal for Art Nouveau elegance */
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .right-panel {
+            width: 65%;
+            height: 100%;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #fffaf0;
+            /* Cream background */
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 1rem;
+            bottom: 1rem;
+            width: 2px;
+            background-color: #d4a373;
+            /* Gold/Bronze tone */
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #3f3844;
+            border: 2px solid #d4a373;
+            margin-top: 5px;
+            margin-left: 0.9rem;
+            margin-right: 2rem;
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .era-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #d4a373;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .era-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #2c2c2c;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .era-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .deco-number {
+            position: absolute;
+            bottom: -3rem;
+            right: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(212, 163, 115, 0.1);
+            font-style: italic;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decorative-graphic {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background-image: url("https://www.genspark.ai/image_placeholder.png");
+            /* Placeholder for Art Nouveau graphic */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            mix-blend-mode: multiply;
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+
+        .city-tag {
+            display: inline-block;
+            background-color: #f3e5d8;
+            color: #3f3844;
+            padding: 0.1rem 0.4rem;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-top: 0.3rem;
+            border: 1px solid #d4a373;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Art Nouveau Texture" class="panel-bg" src="https://www.genspark.ai/image_placeholder.png"/>
+<h1 class="section-title">Art<br/>Nouveau<br/>Timeline</h1>
+<p class="section-subtitle">1890 – 1910: An International Style</p>
+<div style="margin-top: auto; position: relative; z-index: 20;">
+<p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; opacity: 0.9;">
+                    "Art is the only way to run away without leaving home."
+                </p>
+<p style="margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em;">- TWILA THARP (Evoking the
+                    movement's escapism)</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="decorative-graphic"></div>
+<div class="deco-number">Flow</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Brussels & Paris -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1893 – 1895</p>
+<h2 class="era-name">The Birth of the Curve</h2>
+<p class="era-desc">Victor Horta's Tassel House introduces "whiplash" curves in iron. Bing's
+                            <em>L'Art Nouveau</em> gallery opens in Paris, giving the movement its name.</p>
+<div>
+<span class="city-tag">Brussels</span>
+<span class="city-tag">Paris</span>
+</div>
+</div>
+</div>
+<!-- Glasgow -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1896 – 1900</p>
+<h2 class="era-name">The Glasgow Style</h2>
+<p class="era-desc">Charles Rennie Mackintosh and the "Four" develop a unique linear, vertical
+                            geometric variation distinct from continental curves.</p>
+<div>
+<span class="city-tag">Glasgow</span>
+<span class="city-tag">London</span>
+</div>
+</div>
+</div>
+<!-- Vienna & Munich -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1897 – 1903</p>
+<h2 class="era-name">Secession &amp; Jugendstil</h2>
+<p class="era-desc">The Vienna Secession (Klimt, Hoffman) breaks from tradition. Germany's
+                            <em>Jugendstil</em> blends floral motifs with mythic symbolism.</p>
+<div>
+<span class="city-tag">Vienna</span>
+<span class="city-tag">Munich</span>
+</div>
+</div>
+</div>
+<!-- Major Expositions -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1900 – 1905</p>
+<h2 class="era-name">Peak &amp; Proliferation</h2>
+<p class="era-desc">Paris Exposition Universelle (1900) showcases the style globally. Guimard
+                            designs the iconic Paris Métro entrances.</p>
+<div>
+<span class="city-tag">International</span>
+<span class="city-tag">New York</span>
+</div>
+</div>
+</div>
+<!-- Decline -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1910 – 1914</p>
+<h2 class="era-name">Transition to Geometry</h2>
+<p class="era-desc">The style fades as designers move toward the geometric abstraction that will
+                            become Art Deco.</p>
+<div>
+<span class="city-tag">End of Era</span>
+</div>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 1.5rem; right: 2rem; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.1em;">
+                ART NOUVEAU CHRONOLOGY
+            </div>
+</div>
+</div>
+</body>
+</html>

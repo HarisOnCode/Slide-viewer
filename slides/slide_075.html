@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Garment Origins &amp; Silhouette</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.9;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            border-left: 2px solid #fbbf24;
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background-color: #1f1f1f;
+            /* Dark theme for Baroque drama */
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #fbbf24;
+            /* Gold accent */
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #fbbf24;
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #e5e5e5;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #374151;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #d1d5db;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #fbbf24;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: rgba(251, 191, 36, 0.05);
+            padding: 1rem 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #f3f4f6;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-circle {
+            position: absolute;
+            top: -5rem;
+            right: -5rem;
+            width: 15rem;
+            height: 15rem;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Baroque Portrait Silhouette" class="main-image" src="https://www.genspark.ai/image_placeholder.png" style="object-position: top center;"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Portrait of a Nobleman</strong> (c. 1650)<br/>
+                    Displaying the characteristic elongated silhouette of the Baroque era, with rigid bodices and
+                    voluminous lower garments creating a dramatic, imposing presence.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-circle"></div>
+<span class="era-tag">06. Baroque Era</span>
+<h1 class="slide-title">Structure &amp;<br/>Silhouette</h1>
+<div class="text-block">
+<h3 class="text-heading">The Rigid Bodice</h3>
+<p class="body-text">
+                    Baroque fashion introduced structured formality. Women's silhouettes were defined by the rigid
+                    <em>corps à baleine</em> (boned bodice or stays) which elongated the torso and flattened the bust,
+                    contrasting sharply with full, gathered skirts.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Masculine Evolution</h3>
+<p class="body-text">
+                    Men's fashion transitioned from the doublet and hose to the early three-piece suit. The
+                    <em>justaucorps</em> (knee-length coat), waistcoat, and breeches replaced the shorter doublet,
+                    creating a vertical line emphasizing height and dignity.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Clothing became architecture for the body—constructing an image of absolute power through rigid
+                    lines and expansive volume."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Baroque / Garment Origins</span>
+<span class="page-number">75</span>
+</div>
+</div>
+</div>
+</body>
+</html>

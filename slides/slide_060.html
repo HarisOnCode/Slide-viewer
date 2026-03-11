@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medieval Visual Language</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.9;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            display: inline-block;
+            border-left: 3px solid #d4af37;
+            /* Gold accent for medieval theme */
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+            /* Gold accent */
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #1a1a1a;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #374151;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-pattern {
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+            width: 10rem;
+            height: 10rem;
+            opacity: 0.05;
+            background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 0L0 10L10 20L20 10z" fill="%23000000" fill-opacity="1"/%3E%3C/svg%3E');
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="Medieval Manuscript Layout" class="main-image" src="https://page.gensparksite.com/slides_images/aca9032636604cc7441b1d87be940f39.jpg"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Manuscript Illumination</strong> (c. 14th Century)<br/>
+                    Intricate page layouts combining sacred text, miniature illustrations, and marginalia in a unified
+                    visual system.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-pattern"></div>
+<span class="era-tag">05. Medieval Era Visuals</span>
+<h1 class="slide-title">Hierarchies of<br/>Meaning</h1>
+<div class="text-block">
+<h3 class="text-heading">Icon Layers &amp; Gothic Script</h3>
+<p class="body-text">
+                    Medieval visual language was strictly hierarchical. Layouts prioritized sacred text in blackletter
+                    (Textura), surrounded by glosses and illustrations. Scale indicated spiritual importance rather than
+                    perspective depth.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Narrative Surfaces</h3>
+<p class="body-text">
+                    From tapestries to stained glass, surfaces became storytelling mediums for an illiterate populace.
+                    Marginalia introduced secular humor and daily life into sacred contexts, creating a complex dual
+                    narrative.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "The page was a cathedral in miniature—structured, ornamented, and designed to lead the eye toward
+                    the divine."
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Medieval / Visual Language</span>
+<span class="page-number">60</span>
+</div>
+</div>
+</div>
+</body>
+</html>

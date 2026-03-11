@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medieval Era - Why It Matters + POV</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+        }
+
+        /* Atmospheric Background */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            filter: contrast(1.1) brightness(0.7) sepia(0.2);
+            z-index: 1;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 2;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8rem;
+        }
+
+        /* Quote Section */
+        .quote-container {
+            position: relative;
+            margin-bottom: 3rem;
+            max-width: 950px;
+        }
+
+        .quote-mark {
+            position: absolute;
+            top: -5rem;
+            left: -3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(255, 215, 0, 0.15);
+            /* Subtle gold tint */
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: #ffffff;
+            line-height: 1.25;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .quote-text em {
+            font-style: italic;
+            color: #fbbf24;
+            /* Amber-400 for emphasis */
+            font-weight: 400;
+        }
+
+        /* POV Details */
+        .pov-block {
+            border-left: 3px solid #fbbf24;
+            /* Gold accent border */
+            padding-left: 2rem;
+            margin-top: 2rem;
+            max-width: 750px;
+            background: rgba(0, 0, 0, 0.3);
+            padding-right: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .pov-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #fbbf24;
+            margin-bottom: 0.75rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .pov-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        /* Footer Elements */
+        .era-badge {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 0.5rem 1.5rem;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+
+        .student-info {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Image: Scriptorium Scene -->
+<img alt="Medieval Scriptorium Scene" class="background-image" src="https://page.gensparksite.com/slides_images/c711ff2c055821821e993b3a12d187b6.webp"/>
+<!-- Dark Overlay -->
+<div class="overlay"></div>
+<!-- Era Badge -->
+<div class="era-badge">
+<p>05. Medieval Era</p>
+</div>
+<!-- Content -->
+<div class="content-wrapper">
+<div class="quote-container">
+<span class="quote-mark">“</span>
+<p class="quote-text">
+                    The medieval dedication to <em>craft lineage</em> and <em>narrative surfaces</em> transforms objects
+                    into vessels of devotion and storytelling.
+                </p>
+</div>
+<div class="pov-block">
+<span class="pov-label">Why It Matters Today (POV)</span>
+<p class="pov-description">
+                    In an era of mass production, the medieval ethos of "slow, devotional craft" offers a powerful
+                    antidote. This mindset informs sustainable fashion by valuing meticulous handwork, provenance, and
+                    garments that carry meaning beyond mere utility—creating heirlooms rather than disposables.
+                </p>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="student-info">
+<p>Simal Khan FT49 | History of Design</p>
+</div>
+<div class="page-number">
+<p>67</p>
+</div>
+</div>
+</body>
+</html>

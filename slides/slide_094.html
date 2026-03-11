@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Section Opener - Arts &amp; Crafts Movement</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Applying a filter to darken image for text readability */
+            filter: brightness(0.5) contrast(1.1);
+        }
+
+        .content-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 6rem;
+            /* Fallback background color for overlay effect since gradients are avoided */
+            background-color: rgba(30, 40, 20, 0.4);
+        }
+
+        .era-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        .era-number::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #e6ccb2;
+            margin-right: 1.5rem;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 7rem;
+            line-height: 0.9;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .description-box {
+            max-width: 650px;
+            border-left: 4px solid #e6ccb2;
+            padding-left: 2rem;
+        }
+
+        .description-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .sub-details {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: #e6ccb2;
+            letter-spacing: 0.05em;
+            font-style: italic;
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            border: 1px solid rgba(230, 204, 178, 0.6);
+            padding: 1rem 2rem;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .vertical-deco-text {
+            position: absolute;
+            right: 4rem;
+            bottom: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.6);
+            transform: rotate(-90deg);
+            transform-origin: bottom right;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .image-credit {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: sans-serif;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Hero Image -->
+<img alt="William Morris Pattern" class="hero-image" src="https://page.gensparksite.com/slides_images/c05129f4ecbd05da6dc9631a850bb32f.webp"/>
+<!-- Content Overlay -->
+<div class="content-overlay">
+<div class="era-number">
+<p>Era 08</p>
+</div>
+<h1 class="main-title">
+<p>Arts &amp;<br/>Crafts</p>
+</h1>
+<div class="description-box">
+<p class="description-text">Design with integrity: a return to honest craftsmanship, natural forms, and
+                    ethical production.</p>
+<p class="sub-details">Values: Truth to Materials, Nature, Social Reform</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="date-badge">
+<p>c. 1860 – 1910</p>
+</div>
+<div class="vertical-deco-text">
+<p>Reaction to Industrialization</p>
+</div>
+<div class="image-credit">
+<p>Image: William Morris Pattern | Source: Wikimedia Commons / Rawpixel CC0</p>
+</div>
+</div>
+</body>
+</html>

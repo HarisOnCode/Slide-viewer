@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Beliefs &amp; Symbols</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full Bleed Image */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Applying subtle filter for mood */
+            filter: contrast(1.1) brightness(0.9);
+        }
+
+        /* Overlay Caption Box */
+        .caption-overlay {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            z-index: 10;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #800000;
+            /* Deep red for Baroque */
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .key-concept {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .concept-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #1a1a1a;
+        }
+
+        .concept-value {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #800000;
+            /* Deep red accent */
+        }
+
+        /* Top Right Info */
+        .header-info {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            text-align: right;
+            z-index: 10;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .slide-context {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            padding-top: 0.5rem;
+            display: block;
+        }
+
+        /* Image Credit */
+        .image-credit {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            z-index: 10;
+            text-align: right;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Full Bleed Hero Image -->
+<img alt="Baroque Altarpiece Detail" class="hero-bg" src="https://page.gensparksite.com/slides_images/bb6af239da59948c5ec11bf9aeb6c1d8.jpg"/>
+<!-- Header Info -->
+<div class="header-info">
+<span class="slide-number">71</span>
+<span class="slide-context">Baroque / Beliefs</span>
+</div>
+<!-- Caption Box Overlay -->
+<div class="caption-overlay">
+<span class="era-tag">Spectacle &amp; Persuasion</span>
+<h2 class="caption-title">The Theater of Faith</h2>
+<p class="caption-text">
+                Baroque design harnessed the power of spectacle to evoke awe and submission. Through dramatic lighting,
+                ornate emblems, and towering crowns, art became a tool of persuasion for both the Counter-Reformation
+                church and absolutist monarchs, blurring the line between the divine and the royal.
+            </p>
+<div class="key-concept">
+<span class="concept-label">Core Symbolism</span>
+<span class="concept-value">Divine Right &amp; Glory</span>
+</div>
+</div>
+<!-- Image Credit -->
+<div class="image-credit">
+<p>Saint Emerentiana by Francisco de Zurbarán | Source: PICRYL</p>
+</div>
+</div>
+</body>
+</html>

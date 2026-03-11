@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Timeline Overview</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f9f8f4;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .left-panel {
+            width: 35%;
+            height: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            mix-blend-mode: overlay;
+        }
+
+        .right-panel {
+            width: 65%;
+            height: 100%;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 2rem;
+            bottom: 2rem;
+            width: 2px;
+            background-color: #d1d5db;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            margin-top: 6px;
+            margin-left: 1.65rem;
+            margin-right: 2rem;
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .era-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .era-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #111827;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .era-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .deco-number {
+            position: absolute;
+            bottom: -2rem;
+            right: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 12rem;
+            color: rgba(0, 0, 0, 0.03);
+            font-style: italic;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decorative-graphic {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 150px;
+            background-image: url("https://page.gensparksite.com/slides_images/4be3190dd75c0cf0e469a0fe5dc5085f.webp");
+            background-size: cover;
+            opacity: 0.1;
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Texture Background" class="panel-bg" src="https://page.gensparksite.com/slides_images/362828d3a029283bcd0ecb024a79cfc8.webp"/>
+<h1 class="section-title">Design<br/>Through<br/>Time</h1>
+<p class="section-subtitle">A Chronological Evolution</p>
+<div style="margin-top: auto; position: relative; z-index: 20;">
+<p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; opacity: 0.8;">
+                    "Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion
+                    has to do with ideas, the way we live, what is happening."
+                </p>
+<p style="margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em;">- COCO CHANEL</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="decorative-graphic"></div>
+<div class="deco-number">Time</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Era 1-3 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">40,000 BCE – 30 BCE</p>
+<h2 class="era-name">Foundations: Stone Age to Egypt</h2>
+<p class="era-desc">From primal survival and ritual symbols to monumental permanence and divine
+                            order.</p>
+</div>
+</div>
+<!-- Era 4-5 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">800 BCE – 1400 CE</p>
+<h2 class="era-name">Classical to Medieval</h2>
+<p class="era-desc">Greek harmony and Roman power give way to faith-driven craftsmanship and
+                            feudal structures.</p>
+</div>
+</div>
+<!-- Era 6-7 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1600 – 1780</p>
+<h2 class="era-name">The Age of Spectacle</h2>
+<p class="era-desc">Baroque drama and absolutist power evolve into Rococo's intimate, playful
+                            luxury.</p>
+</div>
+</div>
+<!-- Era 8-9 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1860 – 1910</p>
+<h2 class="era-name">Reform &amp; Nature</h2>
+<p class="era-desc">Arts &amp; Crafts rejects industry for honesty; Art Nouveau embraces organic
+                            modernity.</p>
+</div>
+</div>
+<!-- Era 10 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1920 – 1939</p>
+<h2 class="era-name">Modern Geometry</h2>
+<p class="era-desc">Art Deco celebrates speed, technology, and glamour in the machine age.</p>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 2rem; right: 2rem; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.1em;">
+                HISTORY OF DESIGN TIMELINE
+            </div>
+</div>
+</div>
+</body>
+</html>

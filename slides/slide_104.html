@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arts &amp; Crafts - Key Figures</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            background-color: #ffffff;
+            padding: 4rem 5rem;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1.5rem;
+        }
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* Grid Layout */
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr auto;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .grid-item {
+            position: relative;
+            background-color: #f3f4f6;
+            overflow: hidden;
+            height: 330px;
+        }
+
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Content Text Areas */
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            padding-top: 0.5rem;
+            background-color: #faf9f6;
+            padding: 1.5rem;
+            border-left: 3px solid #6b7280;
+        }
+
+        .info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .info-icon {
+            font-size: 1.2rem;
+            color: #4b5563;
+            margin-top: 0.2rem;
+        }
+
+        .info-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .figure-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .figure-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        /* Image Captions */
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            color: #1f2937;
+            border-top: 1px solid #e5e5e5;
+            opacity: 0.9;
+        }
+
+        .grid-item:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-block">
+<span class="era-tag">08. Arts &amp; Crafts Movement</span>
+<h1 class="slide-title">Visionaries of Craft</h1>
+<p class="slide-subtitle">The Philosophy &amp; Figures Behind the Movement</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">104</p>
+</div>
+</div>
+<!-- Moodboard Grid -->
+<div class="moodboard-grid">
+<!-- Large Feature Image (Morris) -->
+<div class="grid-item">
+<img alt="William Morris Pattern Design" class="grid-image" src="https://page.gensparksite.com/slides_images/ef62d58efe59405c48e388edba29e550.webp"/>
+<div class="image-caption">
+<p><strong>William Morris</strong> (1834–1896) — Textile Design</p>
+</div>
+</div>
+<!-- Detail Image 1 (Ruskin) -->
+<div class="grid-item">
+<img alt="John Ruskin Portrait" class="grid-image" src="https://www.genspark.ai/image_placeholder.png" style="object-position: top;"/>
+<div class="image-caption">
+<p><strong>John Ruskin</strong> — The Theorist</p>
+</div>
+</div>
+<!-- Detail Image 2 (Ashbee) -->
+<div class="grid-item">
+<img alt="C.R. Ashbee Silverwork" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p><strong>C.R. Ashbee</strong> — Guild Silverwork</p>
+</div>
+</div>
+<!-- Info Block 1 -->
+<div class="info-container" style="grid-column: span 2;">
+<div class="info-card">
+<div class="info-content">
+<span class="figure-name">William Morris</span>
+<p class="figure-desc">The father of the movement. Poet, designer, and socialist who championed
+                            the revival of traditional textile arts and production methods to counter industrial
+                            alienation.</p>
+</div>
+</div>
+<div class="info-card">
+<div class="info-content">
+<span class="figure-name">John Ruskin</span>
+<p class="figure-desc">Art critic and philosopher. His writings on the "truth to nature" and the
+                            moral value of craftsmanship formed the intellectual backbone of the entire era.</p>
+</div>
+</div>
+</div>
+<!-- Info Block 2 -->
+<div class="info-container" style="grid-column: span 2;">
+<div class="info-card">
+<div class="info-content">
+<span class="figure-name">C.R. Ashbee</span>
+<p class="figure-desc">Architect and silversmith who founded the <em>Guild of Handicraft</em>.
+                            He moved his workshops to the Cotswolds to integrate life, labor, and art in a rural
+                            setting.</p>
+</div>
+</div>
+<div class="info-card">
+<div class="info-content">
+<span class="figure-name">Legacy of Reform</span>
+<p class="figure-desc">These figures established that design is not just aesthetic but
+                            ethical—influencing the Bauhaus and modern sustainable fashion movements.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Arts &amp; Crafts / Key Figures</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

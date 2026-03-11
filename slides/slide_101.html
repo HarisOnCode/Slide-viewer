@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arts &amp; Crafts - Garment &amp; Lifestyle Impact</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-top {
+            width: 100%;
+            height: 60%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-bottom {
+            width: 100%;
+            height: 40%;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid #ffffff;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(62, 76, 60, 0.85);
+            padding: 0.75rem 1rem;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #8f968c;
+            /* Muted olive/sage tone for Arts & Crafts */
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #2c3e2a;
+            /* Dark green/forest tone */
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #a7bfa3;
+            /* Sage green accent */
+        }
+
+        .text-block {
+            margin-bottom: 1.75rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e2a;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-heading::before {
+            content: '❧';
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            color: #a7bfa3;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        .quote-box {
+            border-left: 3px solid #2c3e2a;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            background-color: #f6f8f6;
+            padding: 1rem 1rem 1rem 1.5rem;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #2c3e2a;
+            line-height: 1.5;
+        }
+
+        /* Pagination & Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #9ca3af;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-leaf {
+            position: absolute;
+            top: -3rem;
+            right: -3rem;
+            opacity: 0.05;
+            font-size: 15rem;
+            color: #2c3e2a;
+            z-index: 0;
+            pointer-events: none;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<div class="image-top">
+<img alt="Arts and Crafts style smock dress" class="main-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption" style="bottom: 1rem;">
+<span class="caption-text">
+<strong>Artistic Dress</strong><br/>
+                        Jane Morris in fluid, uncorseted silk gown typical of the movement.
+                    </span>
+</div>
+</div>
+<div class="image-bottom">
+<img alt="William Morris Interior Design" class="main-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption" style="bottom: 1rem;">
+<span class="caption-text">
+<strong>Holistic Interior</strong><br/>
+                        Morris &amp; Co. 'Trellis' wallpaper design integrating nature into the home.
+                    </span>
+</div>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-leaf">❦</div>
+<span class="era-tag">08. Arts &amp; Crafts Movement</span>
+<h1 class="slide-title">Garment &amp;<br/>Lifestyle Impact</h1>
+<div class="text-block">
+<h3 class="text-heading">The Artistic Dress</h3>
+<p class="body-text">
+                    Rejecting the rigid corsetry and artificial silhouettes of Victorian fashion, the movement
+                    championed "Artistic Dress." Loose-fitting smocks, natural waistlines, and fluid drapery prioritized
+                    health, comfort, and natural beauty over restrictive societal norms.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">The Holistic Home</h3>
+<p class="body-text">
+                    William Morris envisioned the home as a total work of art where every object—from wallpaper to
+                    wardrobe—harmonized. Textiles, furniture, and garments were designed with the same ethical
+                    principles: honest materials, visible construction, and nature-inspired motifs.
+                </p>
+</div>
+<div class="quote-box">
+<p class="quote-text">
+                    "Have nothing in your house that you do not know to be useful, or believe to be beautiful." —
+                    William Morris
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Arts &amp; Crafts / Impact</span>
+<span class="page-number">101</span>
+</div>
+</div>
+</div>
+</body>
+</html>

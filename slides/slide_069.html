@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Beliefs &amp; Symbols</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full Bleed Image */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Applying subtle filter for mood */
+            filter: contrast(1.1) brightness(0.9);
+        }
+
+        /* Overlay Caption Box */
+        .caption-overlay {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            z-index: 10;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #800000;
+            /* Deep red for Baroque */
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4b5563;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .key-concept {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .concept-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #1a1a1a;
+        }
+
+        .concept-value {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #800000;
+            /* Deep red accent */
+        }
+
+        /* Top Right Info */
+        .header-info {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            text-align: right;
+            z-index: 10;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .slide-context {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            padding-top: 0.5rem;
+            display: block;
+        }
+
+        /* Image Credit */
+        .image-credit {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            z-index: 10;
+            text-align: right;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Baroque Palace Interior" class="panel-bg" src="https://www.genspark.ai/image_placeholder.png"/>
+<h1 class="section-title">Baroque<br/>Timeline</h1>
+<p class="section-subtitle">1600 – 1750 CE</p>
+<div class="quote-box">
+<p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; opacity: 0.9; color: white;">
+                    "I saw the angel in the marble and carved until I set him free."
+                </p>
+<p style="margin-top: 0.8rem; font-size: 0.8rem; letter-spacing: 0.1em; color: #d4af37; font-weight: 600;">
+                    - MICHELANGELO (Precursor Influence)</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="deco-number">1600</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Era 1 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1600 – 1650 | EARLY BAROQUE</p>
+<h2 class="era-name">The Counter-Reformation</h2>
+<p class="era-desc">The Catholic Church employs dramatic art and architecture as persuasion.
+                            Emergence of chiaroscuro lighting and dynamic movement in Rome.</p>
+</div>
+</div>
+<!-- Era 2 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1650 – 1700 | HIGH BAROQUE</p>
+<h2 class="era-name">Absolutist Courts &amp; Power</h2>
+<p class="era-desc">Louis XIV establishes Versailles as the epicenter of style. Fashion becomes
+                            codified statecraft; global trade introduces exotic textiles.</p>
+</div>
+</div>
+<!-- Era 3 -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">1700 – 1750 | LATE BAROQUE</p>
+<h2 class="era-name">Expansion &amp; Transition</h2>
+<p class="era-desc">Baroque spreads to colonies. Forms become lighter and more ornamental,
+                            paving the way for the delicate asymmetry of Rococo.</p>
+</div>
+</div>
+<!-- Context Note -->
+<div class="timeline-item">
+<div class="timeline-dot" style="background-color: #d4af37;"></div>
+<div class="timeline-content">
+<p class="era-date">KEY INNOVATION</p>
+<h2 class="era-name">The Gesamtkunstwerk</h2>
+<p class="era-desc">The "total work of art" concept where architecture, painting, sculpture, and
+                            fashion unify to create an immersive, theatrical environment.</p>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 2rem; right: 4rem; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.2em; font-weight: 600;">
+                THE AGE OF DRAMA &amp; SPECTACLE
+            </div>
+</div>
+</div>
+</body>
+</html>

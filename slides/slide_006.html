@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stone Age Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f4f1ea;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .left-panel {
+            width: 38%;
+            height: 100%;
+            background-color: #2c241b;
+            color: white;
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .right-panel {
+            width: 62%;
+            height: 100%;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-image: url("https://page.gensparksite.com/slides_images/bdd4b8869719c7957b824ce5476e9f38.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .right-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(244, 241, 234, 0.92);
+            z-index: 1;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            padding-left: 1rem;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 29px;
+            top: 3rem;
+            bottom: 3rem;
+            width: 2px;
+            background-color: #d8c3a5;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .timeline-dot-wrapper {
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+            margin-right: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #8e735b;
+            border: 3px solid #f4f1ea;
+            box-shadow: 0 0 0 1px #8e735b;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding-top: 0.5rem;
+        }
+
+        .era-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #8e735b;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .era-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2c241b;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .era-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #5d564e;
+            line-height: 1.5;
+            max-width: 90%;
+        }
+
+        .era-highlight {
+            font-size: 0.85rem;
+            color: #a89f91;
+            margin-top: 0.5rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .deco-number {
+            position: absolute;
+            bottom: -3rem;
+            right: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 14rem;
+            color: rgba(44, 36, 27, 0.04);
+            font-style: italic;
+            pointer-events: none;
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .quote-box {
+            margin-top: auto;
+            position: relative;
+            z-index: 20;
+            padding-left: 1.5rem;
+            border-left: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Texture Background" class="panel-bg" src="https://page.gensparksite.com/slides_images/9e1ffedcc45eb5233a6bb9efe5576847.webp"/>
+<h1 class="section-title">The Dawn<br/>of Design</h1>
+<p class="section-subtitle">Stone Age Timeline • 2.5M - 3000 BCE</p>
+<div class="quote-box">
+<p class="quote-text">
+                    "Before written language, art was the first global communication system."
+                </p>
+<p class="quote-author">EARLY HUMAN EXPRESSION</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="deco-number">Era 01</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Paleolithic -->
+<div class="timeline-item">
+<div class="timeline-dot-wrapper">
+<div class="timeline-dot"></div>
+</div>
+<div class="timeline-content">
+<p class="era-date">OLD STONE AGE • 2.5M – 10,000 BCE</p>
+<h2 class="era-name">Paleolithic Period</h2>
+<p class="era-desc">Emergence of symbolic thought. Cave paintings at Lascaux and Chauvet depict
+                            animals and hand stencils. First use of ochre pigments and beads.</p>
+<p class="era-highlight">Key Artifact: Venus of Willendorf (c. 25,000 BCE)</p>
+</div>
+</div>
+<!-- Mesolithic -->
+<div class="timeline-item">
+<div class="timeline-dot-wrapper">
+<div class="timeline-dot"></div>
+</div>
+<div class="timeline-content">
+<p class="era-date">MIDDLE STONE AGE • 10,000 – 8,000 BCE</p>
+<h2 class="era-name">Mesolithic Period</h2>
+<p class="era-desc">Transition to semi-settled life. Smaller, more detailed geometric art.
+                            Development of microlith tools and rudimentary textiles from plant fibers.</p>
+<p class="era-highlight">Innovation: Needle and thread technology appearing</p>
+</div>
+</div>
+<!-- Neolithic -->
+<div class="timeline-item">
+<div class="timeline-dot-wrapper">
+<div class="timeline-dot"></div>
+</div>
+<div class="timeline-content">
+<p class="era-date">NEW STONE AGE • 8,000 – 3,000 BCE</p>
+<h2 class="era-name">Neolithic Period</h2>
+<p class="era-desc">Agricultural revolution. Pottery production, weaving looms, and megalithic
+                            architecture (Stonehenge). Ornament becomes status.</p>
+<p class="era-highlight">Milestone: Woven linen and advanced dyes</p>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 2rem; right: 2rem; font-size: 0.7rem; color: #8e735b; letter-spacing: 0.1em; opacity: 0.6;">
+                SIMAL KHAN FT49 • HISTORY OF DESIGN
+            </div>
+</div>
+</div>
+</body>
+</html>

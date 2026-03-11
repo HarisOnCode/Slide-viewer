@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arts &amp; Crafts - Visual Language</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f2eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left Column - Image Side */
+        .image-column {
+            width: 45%;
+            height: 100%;
+            position: relative;
+            background-color: #e5e5e5;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-image {
+            width: 100%;
+            height: 55%;
+            object-fit: cover;
+            border-bottom: 4px solid #ffffff;
+        }
+
+        .bottom-image {
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            right: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            opacity: 0.95;
+            background-color: rgba(62, 76, 62, 0.85);
+            padding: 1rem;
+            display: inline-block;
+            backdrop-filter: blur(4px);
+            border-left: 3px solid #ccebc5;
+        }
+
+        /* Right Column - Content Side */
+        .content-column {
+            width: 55%;
+            height: 100%;
+            padding: 4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background-image: url("https://www.genspark.ai/image_placeholder.png");
+            background-blend-mode: multiply;
+            background-color: #fdfbf7;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #556b2f;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.1;
+            color: #2f3e2f;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #8fbc8f;
+        }
+
+        .text-block {
+            margin-bottom: 2rem;
+        }
+
+        .text-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #3e4c3e;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-heading::before {
+            content: '❧';
+            margin-right: 0.5rem;
+            color: #8fbc8f;
+            font-size: 1.5rem;
+        }
+
+        .body-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #4b5563;
+            font-weight: 300;
+            padding-left: 2rem;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        .page-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7280;
+            letter-spacing: 0.1em;
+        }
+
+        .topic-bread {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Decorative Elements */
+        .deco-leaf {
+            position: absolute;
+            top: -3rem;
+            right: -3rem;
+            width: 15rem;
+            height: 15rem;
+            border: 2px solid #e8f5e9;
+            border-radius: 50% 0 50% 50%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.6;
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Image Column -->
+<div class="image-column">
+<img alt="William Morris Textile Pattern" class="top-image" src="https://page.gensparksite.com/slides_images/362828d3a029283bcd0ecb024a79cfc8.webp"/>
+<img alt="Gothic Revival Tiles" class="bottom-image" src="https://page.gensparksite.com/slides_images/d162d9c780b013f44ca6d41696e9f740.webp"/>
+<div class="image-caption">
+<span class="caption-text">
+<strong>Organic Geometry</strong><br/>
+                    Intricate textile repeats by William Morris &amp; Gothic Revival tilework emphasizing nature's
+                    inherent structure.
+                </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="content-column">
+<div class="deco-leaf"></div>
+<span class="era-tag">08. Arts &amp; Crafts Movement</span>
+<h1 class="slide-title">Visual Language:<br/>Nature &amp; Order</h1>
+<div class="text-block">
+<h3 class="text-heading">Interlacing Florals</h3>
+<p class="body-text">
+                    Rejecting industrial uniformity, designers embraced complex, organic rhythms found in nature.
+                    Patterns featured dense, intertwining foliage, birds, and trellises that maintained a flat,
+                    decorative surface rather than illusory depth.
+                </p>
+</div>
+<div class="text-block">
+<h3 class="text-heading">Gothic Revival</h3>
+<p class="body-text">
+                    Drawing inspiration from medieval craftsmanship, the movement adopted bold outlines, honest
+                    construction, and pointed arches. Visuals emphasized structure and utility, where beauty was derived
+                    from the quality of execution rather than applied ornament.
+                </p>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span class="topic-bread">History of Design / Arts &amp; Crafts / Visuals</span>
+<span class="page-number">99</span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arts &amp; Crafts - Color &amp; Materiality</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfcfc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            background-color: #fdfbf7;
+            /* Slightly warmer background for Arts & Crafts feel */
+            padding: 4rem 5rem;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        /* Header Section */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 1rem;
+        }
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #556b2f;
+            /* Olive green tone */
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* Grid Layout */
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr auto;
+            /* Adjusted for better layout */
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .grid-item {
+            position: relative;
+            background-color: #e5e7eb;
+            overflow: hidden;
+            height: 340px;
+            /* Specific height for images */
+            border-radius: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .swatch-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            padding-top: 0.5rem;
+        }
+
+        .swatch-card {
+            display: flex;
+            align-items: flex-start;
+            /* Align nicely with text */
+            gap: 1rem;
+            background-color: #ffffff;
+            padding: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .color-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid #d1d5db;
+            flex-shrink: 0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Material Texture Swatches */
+        .texture-swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            border: 1px solid #d1d5db;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swatch-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1f2937;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-meaning {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Image Credits */
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            color: #374151;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .grid-item:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .grid-item:nth-child(1) {
+            grid-column: span 2;
+            /* Large hero image */
+        }
+
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-block">
+<p class="era-tag">08. Arts &amp; Crafts Movement</p>
+<h1 class="slide-title">Nature's Honest Palette</h1>
+<p class="slide-subtitle">Earth Tones, Vegetable Dyes &amp; Truth to Materials</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #e5e7eb; margin: 0;">98</p>
+</div>
+</div>
+<!-- Moodboard Grid -->
+<div class="moodboard-grid">
+<!-- Large Feature Image: Morris Pattern -->
+<div class="grid-item">
+<img alt="William Morris Textile Pattern" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p>William Morris "Strawberry Thief" textile pattern - complex natural forms</p>
+</div>
+</div>
+<!-- Detail Image 1: Indigo Dyeing/Textile -->
+<div class="grid-item">
+<img alt="Indigo Dyed Fabric" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p>Traditional indigo block printing - valuing hand-craft</p>
+</div>
+</div>
+<!-- Detail Image 2: Oak Furniture Detail -->
+<div class="grid-item">
+<img alt="Oak Wood Joinery" class="grid-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<div class="image-caption">
+<p>Exposed oak joinery - celebrating construction</p>
+</div>
+</div>
+<!-- Color Palette Swatches - Left Column -->
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #556B2F;"></div>
+<div class="swatch-info">
+<p class="color-name">Earth Green (Olive)</p>
+<p class="color-meaning">Represented the natural world, foliage, and growth. Derived from
+                            natural dyes like weld and indigo mixture.</p>
+</div>
+</div>
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #2F4F4F;"></div>
+<div class="swatch-info">
+<p class="color-name">Deep Indigo Blue</p>
+<p class="color-meaning">Symbolized honest labor and traditional dyeing techniques. A staple
+                            background color for Morris prints.</p>
+</div>
+</div>
+</div>
+<!-- Material Swatches - Right Column -->
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #8B2E18;"></div>
+<div class="swatch-info">
+<p class="color-name">Madder Red (Rust)</p>
+<p class="color-meaning">Warm, earthy red from madder root. Used to create rich contrast without
+                            synthetic harshness.</p>
+</div>
+</div>
+<div class="swatch-card">
+<!-- Simulating Oak Texture with color/gradient fallback for stability -->
+<div class="texture-swatch" style='background-color: #C19A6B; background-image: url("https://www.genspark.ai/image_placeholder.png");'>
+</div>
+<div class="swatch-info">
+<p class="color-name">Natural Oak &amp; Linen</p>
+<p class="color-meaning">Truth to materials: unvarnished wood and unbleached linen emphasized
+                            structural honesty and texture.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<p>History of Design / Arts &amp; Crafts / Materials</p>
+<p>SIMAL KHAN FT49</p>
+</div>
+</div>
+</body>
+</html>

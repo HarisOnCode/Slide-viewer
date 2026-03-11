@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Egyptian Era Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            background-color: #fcfbf9;
+            /* Slightly warmer white for Egypt */
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .left-panel {
+            width: 35%;
+            height: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            mix-blend-mode: luminosity;
+            /* Black and white editorial look */
+        }
+
+        .right-panel {
+            width: 65%;
+            height: 100%;
+            padding: 3rem 4rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 20;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .timeline-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 2rem;
+            bottom: 2rem;
+            width: 1px;
+            background-color: #d4a373;
+            /* Gold/Sand accent color */
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d4a373;
+            margin-top: 6px;
+            margin-left: 1.65rem;
+            margin-right: 2rem;
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px #fcfbf9;
+            /* Spacing effect */
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .era-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: #8b7355;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .era-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #111827;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .era-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .deco-number {
+            position: absolute;
+            bottom: -2rem;
+            right: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 12rem;
+            color: rgba(212, 163, 115, 0.05);
+            font-style: italic;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decorative-graphic {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background-image: url("https://page.gensparksite.com/slides_images/bd7b22e54f263c5f392f0174ecf413f2.webp");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Left Panel -->
+<div class="left-panel">
+<img alt="Egyptian Relief" class="panel-bg" src="https://page.gensparksite.com/slides_images/bd7b22e54f263c5f392f0174ecf413f2.webp"/>
+<h1 class="section-title">Egyptian<br/>Era<br/>Timeline</h1>
+<p class="section-subtitle">Dynasties &amp; Evolution</p>
+<div style="margin-top: auto; position: relative; z-index: 20;">
+<p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; opacity: 0.8;">
+                    "To speak the name of the dead is to make them live again."
+                </p>
+<p style="margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em;">- ANCIENT PROVERB</p>
+</div>
+</div>
+<!-- Right Panel - Timeline -->
+<div class="right-panel">
+<div class="decorative-graphic"></div>
+<div class="deco-number">Nile</div>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Old Kingdom -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">c. 2686 – 2181 BCE</p>
+<h2 class="era-name">Old Kingdom</h2>
+<p class="era-desc">The "Age of Pyramids." Establishment of artistic conventions, monumental
+                            stone architecture (Giza), and divine kingship.</p>
+</div>
+</div>
+<!-- Middle Kingdom -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">c. 2055 – 1650 BCE</p>
+<h2 class="era-name">Middle Kingdom</h2>
+<p class="era-desc">Classical period of art and literature. Rise of block statues, jewelry
+                            sophistication, and deeper cultural unification.</p>
+</div>
+</div>
+<!-- New Kingdom -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">c. 1550 – 1069 BCE</p>
+<h2 class="era-name">New Kingdom</h2>
+<p class="era-desc">The Golden Age. Temple complexes (Karnak, Luxor), the Amarna revolution
+                            (Akhenaten), and elaborate burial goods (Tutankhamun).</p>
+</div>
+</div>
+<!-- Ptolemaic -->
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<p class="era-date">332 BCE – 30 BCE</p>
+<h2 class="era-name">Ptolemaic &amp; Roman</h2>
+<p class="era-desc">Greek influence merges with Egyptian tradition. Hybrid deities, Fayum mummy
+                            portraits, and the library of Alexandria.</p>
+</div>
+</div>
+</div>
+<div style="position: absolute; bottom: 2rem; right: 2rem; font-size: 0.7rem; color: #9ca3af; letter-spacing: 0.1em;">
+                HISTORY OF DESIGN: EGYPTIAN ERA
+            </div>
+</div>
+</div>
+</body>
+</html>

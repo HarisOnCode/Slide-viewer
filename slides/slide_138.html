@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glossary - Quick Reference</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            position: relative;
+            background-image: url('https://page.gensparksite.com/slides_images/ef62d58efe59405c48e388edba29e550.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 2.5rem 4rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        /* Card Grid Layout */
+        .cards-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+            padding: 1.5rem 4rem 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .glossary-card {
+            background-color: #ffffff;
+            border: 1px solid #f3f4f6;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glossary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border-color: #e5e5e5;
+        }
+
+        .glossary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #f3f4f6;
+            transition: background-color 0.3s ease;
+        }
+
+        .glossary-card:hover::before {
+            background-color: #1a1a1a;
+        }
+
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .term-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .era-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #9ca3af;
+            padding: 0.2rem 0.5rem;
+            background-color: #f9fafb;
+            border-radius: 4px;
+        }
+
+        .term-definition {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #4b5563;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        .footer-info {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 4rem;
+            right: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            z-index: 10;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Overlay -->
+<div class="overlay"></div>
+<!-- Header -->
+<div class="header-section">
+<div class="header-content">
+<span class="section-tag">Design Terminology</span>
+<h1 class="slide-title">Glossary: Quick Reference</h1>
+</div>
+<div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">138</div>
+</div>
+<!-- Glossary Cards Grid -->
+<div class="cards-grid">
+<!-- Card 1 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Chiton</h3>
+<span class="era-label">Greek</span>
+</div>
+<div class="term-definition">
+<p>A simple tunic garment of lighter linen that was worn by both genders and all ages. It consisted
+                        of a wide, rectangular tube of material secured along the shoulders and upper arms by a series
+                        of fasteners.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Himation</h3>
+<span class="era-label">Greek</span>
+</div>
+<div class="term-definition">
+<p>A mantle or wrap worn by ancient Greek men and women over the chiton. It was essentially a large
+                        rectangular piece of heavy fabric, usually wool, draped over the left shoulder and about the
+                        body.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Stola</h3>
+<span class="era-label">Roman</span>
+</div>
+<div class="term-definition">
+<p>The traditional garment of Roman women, corresponding to the toga worn by men. It was a long,
+                        pleated dress worn over an undertunic (tunica intima) and was the symbol of a married woman's
+                        status.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Usekh</h3>
+<span class="era-label">Egyptian</span>
+</div>
+<div class="term-definition">
+<p>A broad collar or necklace worn by the elite of ancient Egypt. Made of rows of beads, gold, or
+                        faience, it covered the shoulders and chest, serving both decorative and protective (amuletic)
+                        functions.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Paniers</h3>
+<span class="era-label">Rococo</span>
+</div>
+<div class="term-definition">
+<p>Wide side-hoops worn under skirts to extend the width of the hips while leaving the front and
+                        back flat. This silhouette created a broad canvas for displaying woven patterns and embroidery.
+                    </p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Whiplash</h3>
+<span class="era-label">Art Nouveau</span>
+</div>
+<div class="term-definition">
+<p>A decorative motif characterized by asymmetrical, sinuous lines that curve back on themselves,
+                        resembling a cracking whip. It symbolizes the organic energy and movement central to the style.
+                    </p>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Ziggurat</h3>
+<span class="era-label">Art Deco</span>
+</div>
+<div class="term-definition">
+<p>A stepped pyramid structure originating from ancient Mesopotamia, adopted as a key motif in Art
+                        Deco architecture and design. It represents the style's geometric, skyscraper-inspired
+                        aesthetic.</p>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="glossary-card">
+<div class="term-header">
+<h3 class="term-name">Streamline</h3>
+<span class="era-label">Art Deco</span>
+</div>
+<div class="term-definition">
+<p>A later Art Deco style (Streamline Moderne) emphasizing aerodynamic lines, rounded corners, and
+                        horizontal bands. Influenced by speed and motion in transportation design.</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Glossary</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

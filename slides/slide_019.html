@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Egyptian - Religion &amp; Symbols</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf6e3;
+            /* Light papyrus color for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Full Bleed Image */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            /* Applying subtle filter for mood - warmer for Egypt */
+            filter: contrast(1.1) brightness(0.9) sepia(0.2);
+        }
+
+        /* Overlay Caption Box */
+        .caption-overlay {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            width: 500px;
+            background-color: rgba(26, 26, 26, 0.95);
+            /* Dark background for Egypt slide */
+            padding: 2.5rem;
+            z-index: 10;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid #d4af37;
+            /* Gold accent */
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #d4af37;
+            /* Gold text */
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .caption-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            color: #ffffff;
+            /* White text */
+            margin-bottom: 1.5rem;
+        }
+
+        .caption-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #d1d5db;
+            /* Light gray text */
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .key-concept {
+            border-top: 1px solid #4b5563;
+            /* Darker border */
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .concept-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+        }
+
+        .concept-value {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #d4af37;
+            /* Gold text */
+        }
+
+        /* Top Right Info */
+        .header-info {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            text-align: right;
+            z-index: 10;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: #d4af37;
+        }
+
+        .slide-context {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            border-top: 1px solid rgba(212, 175, 55, 0.8);
+            padding-top: 0.5rem;
+            display: block;
+        }
+
+        /* Image Credit */
+        .image-credit {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            z-index: 10;
+            text-align: right;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Symbol Icons */
+        .symbol-grid {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .symbol-item {
+            text-align: center;
+        }
+
+        .symbol-icon {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 0.25rem;
+        }
+
+        .symbol-name {
+            font-size: 0.65rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Full Bleed Hero Image -->
+<img alt="Ancient Egyptian Deities Papyrus" class="hero-bg" src="https://page.gensparksite.com/slides_images/828a2dfa6f87c4a734af6cb1c324ad17.webp"/>
+<!-- Header Info -->
+<div class="header-info">
+<span class="slide-number">19</span>
+<span class="slide-context">Egyptian / Beliefs</span>
+</div>
+<!-- Caption Box Overlay -->
+<div class="caption-overlay">
+<span class="era-tag">Polytheism &amp; Afterlife</span>
+<h2 class="caption-title">Order, Magic &amp; Eternity</h2>
+<p class="caption-text">
+                Egyptian design was fundamentally religious, serving a complex pantheon of gods and the journey to the
+                afterlife. Every symbol carried potent magical meaning: the Ankh for life, the Scarab for rebirth, and
+                the Eye of Horus for protection and health. Art was not just decoration, but a tool to ensure eternal
+                existence.
+            </p>
+<div class="symbol-grid">
+<div class="symbol-item">
+<div class="symbol-icon">☥</div>
+<div class="symbol-name">Ankh</div>
+</div>
+<div class="symbol-item">
+<div class="symbol-icon">𓆣</div>
+<div class="symbol-name">Scarab</div>
+</div>
+<div class="symbol-item">
+<div class="symbol-icon">𓂀</div>
+<div class="symbol-name">Eye of Horus</div>
+</div>
+</div>
+<div class="key-concept" style="margin-top: 1.5rem;">
+<span class="concept-label">Core Focus</span>
+<span class="concept-value">Ma'at (Cosmic Balance)</span>
+</div>
+</div>
+<!-- Image Credit -->
+<div class="image-credit">
+<p>Egyptian Tomb Painting | Source: Wikimedia Commons</p>
+</div>
+</div>
+</body>
+</html>

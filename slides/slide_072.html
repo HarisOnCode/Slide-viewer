@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Color Symbolism</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f8f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            background-color: #ffffff;
+            padding: 4rem 5rem;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1.5rem;
+        }
+
+        .title-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .era-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .slide-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* Grid Layout */
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr auto;
+            gap: 1.5rem;
+            flex: 1;
+            height: 100%;
+        }
+
+        .grid-item {
+            position: relative;
+            background-color: #f3f4f6;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .swatch-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+
+        .swatch-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #e5e5e5;
+        }
+
+        .swatch-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .color-meaning {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        /* Image Credits */
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            color: #4b5563;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .grid-item:nth-child(1) {
+            grid-column: span 2;
+        }
+
+        .footer-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-section">
+<div class="title-block">
+<span class="era-tag">06. Baroque Era</span>
+<h1 class="slide-title">Dramatic Contrast</h1>
+<p class="slide-subtitle">Chiaroscuro, Deep Tones &amp; Gilded Power</p>
+</div>
+<div style="text-align: right;">
+<p style="font-family: 'Playfair Display', serif; font-size: 3rem; color: #f3f4f6;">72</p>
+</div>
+</div>
+<!-- Moodboard Grid -->
+<div class="moodboard-grid">
+<!-- Large Feature Image -->
+<div class="grid-item">
+<img alt="Baroque Portrait Painting" class="grid-image" src="https://page.gensparksite.com/slides_images/c08f8a8cb32d3beb21f2be94047c636c.jpg"/>
+<div class="image-caption">
+<p>Velázquez Portrait - Deep contrasts &amp; rich fabrics</p>
+</div>
+</div>
+<!-- Detail Image 1 -->
+<div class="grid-item">
+<img alt="Baroque Texture" class="grid-image" src="https://page.gensparksite.com/slides_images/93e2388481d6cead82c6c11d340de4ed.jpg" style="object-fit: cover; object-position: center;"/>
+<div class="image-caption">
+<p>Veronese - Heavy drapery and ornamentation</p>
+</div>
+</div>
+<!-- Detail Image 2 -->
+<div class="grid-item">
+<img alt="Dark Background Details" class="grid-image" src="https://page.gensparksite.com/slides_images/d6d11cf72e321b049ab0ca67fcc53fc8.webp"/>
+<div class="image-caption">
+<p>Chiaroscuro technique in portraiture</p>
+</div>
+</div>
+<!-- Color Palette Swatches -->
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #4a0404;"></div>
+<div class="swatch-info">
+<span class="color-name">Deep Crimson</span>
+<p class="color-meaning">Symbolized power, martyrdom, and passion. A favored hue for velvet
+                            court garments.</p>
+</div>
+</div>
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #c5a059;"></div>
+<div class="swatch-info">
+<span class="color-name">Gilded Gold</span>
+<p class="color-meaning">Represented divine light and absolutist wealth. Heavily used in
+                            embroidery and frames.</p>
+</div>
+</div>
+</div>
+<div class="swatch-container" style="grid-column: span 2;">
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #0a0a0a;"></div>
+<div class="swatch-info">
+<span class="color-name">Midnight Black</span>
+<p class="color-meaning">The void of 'chiaroscuro' (light/dark). Created dramatic backdrops for
+                            subjects.</p>
+</div>
+</div>
+<div class="swatch-card">
+<div class="color-circle" style="background-color: #f5e6c4;"></div>
+<div class="swatch-info">
+<span class="color-name">Illuminated Ivory</span>
+<p class="color-meaning">The 'light' source in Baroque art, highlighting emotion, flesh, and
+                            spiritual revelation.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-info">
+<span>History of Design / Baroque / Color</span>
+<span>SIMAL KHAN FT49</span>
+</div>
+</div>
+</body>
+</html>

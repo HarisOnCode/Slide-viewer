@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baroque - Why It Matters + POV</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 900px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+        }
+
+        /* Atmospheric Background */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            filter: contrast(1.3) brightness(0.7);
+            z-index: 1;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8rem;
+        }
+
+        /* Quote Section */
+        .quote-container {
+            position: relative;
+            margin-bottom: 3rem;
+            max-width: 950px;
+        }
+
+        .quote-mark {
+            position: absolute;
+            top: -5rem;
+            left: -3rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: rgba(255, 215, 0, 0.2);
+            /* Baroque gold hint */
+            line-height: 1;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: #ffffff;
+            line-height: 1.25;
+            font-weight: 400;
+        }
+
+        .quote-text em {
+            font-style: italic;
+            color: #ffd700;
+            /* Gold accent */
+            font-weight: 500;
+        }
+
+        /* POV Details */
+        .pov-block {
+            border-left: 3px solid #ffd700;
+            /* Gold accent */
+            padding-left: 2rem;
+            margin-top: 2rem;
+            max-width: 750px;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .pov-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #ffd700;
+            margin-bottom: 0.8rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .pov-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: #e5e5e5;
+            line-height: 1.6;
+        }
+
+        /* Footer Elements */
+        .era-badge {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            padding: 0.5rem 1.5rem;
+            color: #ffd700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.2em;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+
+        .student-info {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Image - Stage-like interior representing Baroque drama -->
+<img alt="Baroque Stage Interior" class="background-image" src="https://www.genspark.ai/image_placeholder.png"/>
+<!-- Dark Overlay -->
+<div class="overlay"></div>
+<!-- Era Badge -->
+<div class="era-badge">
+<p>06. Baroque Era</p>
+</div>
+<!-- Content -->
+<div class="content-wrapper">
+<div class="quote-container">
+<span class="quote-mark">“</span>
+<p class="quote-text">
+                    The Baroque era taught us that design is <em>theater</em>—using light, shadow, and scale to command
+                    attention and project power.
+                </p>
+</div>
+<div class="pov-block">
+<span class="pov-label">Why It Matters Today (POV)</span>
+<p class="pov-description">
+                    This era is the DNA of cinematic branding. In fashion, understanding the Baroque "spectacle" allows
+                    us to craft runway moments and editorials where silhouette and lighting create emotional drama,
+                    proving that sometimes excess is the most powerful form of minimalism.
+                </p>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="student-info">
+<p>Simal Khan FT49 | History of Design</p>
+</div>
+<div class="page-number">
+<p>80</p>
+</div>
+</div>
+</body>
+</html>
